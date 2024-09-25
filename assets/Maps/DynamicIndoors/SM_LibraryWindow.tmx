@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="4" height="5" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="1">
+ <tileset firstgid="1" name="spring_ScarletMansionTileSheet3" tilewidth="16" tileheight="16" tilecount="625" columns="25">
+  <image source="ScarletMansionTileSheet3.png" width="400" height="400"/>
+ </tileset>
+ <layer id="1" name="Back2" width="4" height="5">
+  <data encoding="csv">
+31,32,33,34,
+56,57,58,59,
+81,82,83,84,
+106,107,108,109,
+131,132,133,134
+</data>
+ </layer>
+ <objectgroup id="2" name="Back2"/>
+</map>

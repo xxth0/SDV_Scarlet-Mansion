@@ -1,0 +1,12 @@
+{
+	// Schedule
+    "spring": "0 xxth0.ScarletMansion_XethCoffin 2 3 0/ 800 xxth0.ScarletMansion_ScarletMansion1F 6 21 3/ 2000 xxth0.ScarletMansion_ScarletCourtyard 15 35 0/ 2400 xxth0.ScarletMansion_XethCoffin 2 3 0",
+	"spring_Mon": "0 xxth0.ScarletMansion_XethCoffin 2 3 0/ 800 xxth0.ScarletMansion_ScarletMansion1F 36 8 0",
+	"spring_Wed": "0 Club 5 10 3/ 1200 Club 7 4 0/ 1400 Club 5 10 3/ 2000 SandyHouse 2 7 0/ 2200 Desert 28 10 2",
+	// "spring_Fri": "0 AdventureGuild 1 13 1/ 1200 AdventureGuild 7 16 1/ 1830 Saloon 1 18 1/ ",
+	"summer": "0 xxth0.ScarletMansion_ScarletMansion1F 124 21 0/",
+	"fall": "0 xxth0.ScarletMansion_ScarletMansion1F 124 21 0/ 700 xxth0.ScarletMansion_XethCoffin 2 3 0/ 2000 xxth0.ScarletMansion_ScarletMansion1F 37 8 0",
+	"winter": "610 xxth0.ScarletMansion_ScarletCourtyard 25 47 2/ 800 WizardHouse 7 19 3/",
+	"winter_Fri": "610 xxth0.ScarletMansion_ScarletCourtyard 21 33 2/",
+	"winter_Sun": "610 xxth0.ScarletMansion_ScarletCourtyard 21 33 2/",
+}

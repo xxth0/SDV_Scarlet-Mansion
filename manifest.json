@@ -1,0 +1,12 @@
+{
+  "Name": "[CP]Scarlet Mansion",
+  "Author": "xxth0",
+  "Version": "1.0.0",
+  "Description": "Dive into the mysteries of the Scarlet Mansion, nestled deep in the northern reaches of the Secret Woods.",
+  "UniqueID": "xxth0.ScarletMansion",
+  "UpdateKeys": [""],
+  "MinimumApiVersion": "4.0.0",
+  "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}

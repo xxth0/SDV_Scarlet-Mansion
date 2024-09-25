@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="7" height="3" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="1">
+ <properties>
+  <property name="DayTiles" value="Back2 0 0 26 Back2 1 0 27 Back2 5 0 26 Back2 6 0 27 Back2 0 1 51 Back2 1 1 52 Back2 5 1 51 Back2 6 1 52 Back2 0 2 76 Back2 1 2 77 Back2 5 2 76 Back2 6 2 77"/>
+  <property name="NightTiles" value="Back2 0 0 28 Back2 1 0 29 Back2 5 0 28 Back2 6 0 29 Back2 0 1 53 Back2 1 1 54 Back2 5 1 53 Back2 6 1 54 Back2 0 2 78 Back2 1 2 79 Back2 5 2 78 Back2 6 2 79"/>
+ </properties>
+ <tileset firstgid="1" name="spring_ScarletMansionTileSheet3" tilewidth="16" tileheight="16" tilecount="625" columns="25">
+  <image source="ScarletMansionTileSheet3.png" width="400" height="400"/>
+ </tileset>
+ <layer id="1" name="Back2" width="7" height="3">
+  <data encoding="csv">
+27,28,0,0,0,29,30,
+52,53,0,0,0,54,55,
+77,78,0,0,0,79,80
+</data>
+ </layer>
+</map>

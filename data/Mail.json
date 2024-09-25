@@ -1,0 +1,56 @@
+{
+  "Changes": [
+  	{
+		// Load Custom letter backgrounds //
+        "Action": "Load",
+		"Priority": "Low",
+        "Target": "Mods/{{ModId}}/LetterBackgrounds",
+        "FromFile": "assets/Pngs/LetterBackgrounds/ScarletMansionletterBG.png"
+    },
+	
+		// Xeth's Mails //
+	{
+		"LogName": "1 Heart Event Scarlet Mansion Invitation.",
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {
+			"{{ModId}}_XethHeartEventMail.1/f Xeth 250/x XethMansionInvitation": "null"
+      }
+    },
+	{
+		"LogName": "2 Heart.",
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {
+			"{{ModId}}_XethHeartEventMail.2/f Xeth 500/x Xeth2HeartLetter": "null"
+      }
+    },
+	
+	{
+		"LogName": "1 Hearts Felix. Test",
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {
+			"{{ModId}}_FelixHeartEventMail.1/f Felix 250/x Felix1HeartLetter": "null"
+      }
+    },
+	
+	
+	{
+		"Action": "EditData",
+		"Target": "Data/Mail",
+		"Entries": {
+			"XethMansionInvitation": "{{i18n:Xeth.Mail.1}}",
+			"Xeth2HeartLetter": "{{i18n:Xeth.Mail.2}}",
+			
+			"Felix1HeartLetter": "{{i18n:Felix.Mail.1}}",
+			
+			// Pass out mail //
+			"{{ModId}}_PassOutInMansion_Billed": "{{i18n:ScarletMansion.PassoutMail.{{Random: {{Range: 1, 4}} }} }}",
+			"{{ModId}}_PassOutInMansion_NotBilled": "{{i18n:ScarletMansion.PassoutMail.{{Random: {{Range: 1, 4}} }} }}",
+			"{{ModId}}_PassOutInCourtyard_Billed": "{{i18n:ScarletCourtyard.PassoutMail.{{Random: {{Range: 1, 4}} }} }}",
+			"{{ModId}}_PassOutInCourtyard_NotBilled": "{{i18n:ScarletCourtyard.PassoutMail.{{Random: {{Range: 1, 4}} }} }}",
+      }
+    }
+  ]
+}

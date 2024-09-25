@@ -1,0 +1,208 @@
+{
+	"Changes": [
+	{
+			"LogName": "Xeth's basic info",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Xeth": {
+                    "DisplayName": "{{i18n:NPCName:Xeth}}",
+					"BirthSeason": "fall",
+					"Birthday": 23,
+					"HomeRegion": "Other",
+					"Gender": "Male",
+					"Age": "Adult",
+					"Manner": "Neutral",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Negative",
+                    "SpawnIfMissing": true,
+                    "IsDarkSkinned": false,
+                    "CanBeRomanced": true,
+                    "Calendar": "AlwaysShown",
+                    "SocialTab": "UnknownUntilMet",
+                    "CanSocialize": true,
+                    "CanVisitIslandCondition": false,
+                    "ExcludeFromIntroductionsQuest": false,
+                    "ExcludeFromPerfectionScore": false,
+                    "EndSlideShow": "MainGroup",
+                    "SpouseGiftJealousy": true,
+                    "FriendsAndFamily": {},
+                    "UnlockConditions": null,
+					"KissingSpriteIndex": 28,
+					"KissSpriteFacingRight": true,
+					"SpawnIfMissing": true,
+                    "SpouseRoom": {
+                        "MapAsset": "{{ModId}}_Xeth_Spouse_Room",
+                        "MapSourceRect": {
+                            "X": 0,
+                            "Y": 0,
+                            "Width": 6,
+                            "Height": 9
+                        }
+                    },
+					 "SpousePatio": {
+                      "MapAsset": "{{ModId}}_Xeth_Spouse_Area",
+                      "MapSourceRect": {
+                          "X": 0,
+                          "Y": 0,
+                          "Width": 4,
+                          "Height": 4
+                      }
+					},
+					// Spawn Area //
+					"Home": [
+                    {
+                        "Id": "Default",
+                        "Condition": null,
+                        "Location": "{{ModId}}_XethCoffin",
+                        "Tile": {"X": 2, "Y": 3},
+						"Direction": "down"
+                    },
+                  ]
+                }
+            }
+        },
+		
+		// Gift Tastes //
+        {
+            "LogName": "Xeth's Gift Tastes (No SVE)",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "Xeth": "{{i18n:Xeth.GiftTastes.love.{{Random: {{Range: 1, 4}} }}}}/348 773 852 373 279 797 74 769 896/{{i18n:Xeth.GiftTastes.like.{{Random: {{Range: 1, 4}} }}}}/64 253 395 338 308 795 305 -79/{{i18n:Xeth.GiftTastes.dislike.{{Random: {{Range: 1, 4}} }}}}/248 768 729 649/{{i18n:Xeth.GiftTastes.hate.{{Random: {{Range: 1, 4}} }}}}/767 421 595 772 879 -20/{{i18n:Xeth.GiftTastes.neutral.{{Random: {{Range: 1, 4}} }}}}/422 305 80 82 724 84 382 -2 -4 -7 -12 -26//"
+            },
+			"When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+            }
+        },
+        {
+            "LogName": "Spouse Xeth's Gift Tastes (No SVE)",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "Xeth": "{{i18n:Spouse.Xeth.GiftTastes.love.{{Random: {{Range: 1, 4}} }}}}/348 773 852 373 279 797 74 769 896/{{i18n:Spouse.Xeth.GiftTastes.like.{{Random: {{Range: 1, 4}} }}}}/64 253 395 338 308 795 305 -79 xxth0.ScarletMansion_Beef.Wellington/{{i18n:Spouse.Xeth.GiftTastes.dislike.{{Random: {{Range: 1, 4}} }}}}/248 768 729 649/{{i18n:Spouse.Xeth.GiftTastes.hate.{{Random: {{Range: 1, 4}} }}}}/767 421 595 772 879 -20/{{i18n:Spouse.Xeth.GiftTastes.neutral.{{Random: {{Range: 1, 4}} }}}}/422 305 80 82 724 84 382 -2 -4 -7 -12 -26//"
+            },
+			"When": {
+                "Spouse": "Xeth",
+            }
+        },
+		{
+            "LogName": "Xeth's Gift Tastes (SVE)",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "Xeth": "{{i18n:Xeth.GiftTastes.love.{{Random: {{Range: 1, 4}} }}}}/348 773 852 373 279 797 74 769 896 FlashShifter.StardewValleyExpandedCP_Void_Shard FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Void_Soul FlashShifter.StardewValleyExpandedCP_Swirl_Stone/{{i18n:Xeth.GiftTastes.like.{{Random: {{Range: 1, 4}} }}}}/64 253 395 338 308 795 305 -79 xxth0.ScarletMansion_Beef.Wellington FlashShifter.StardewValleyExpandedCP_Void_Root FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine /{{i18n:Xeth.GiftTastes.dislike.{{Random: {{Range: 1, 4}} }}}}/248 768 729 649/{{i18n:Xeth.GiftTastes.hate.{{Random: {{Range: 1, 4}} }}}}/767 421 595 772 879 -20/{{i18n:Xeth.GiftTastes.neutral.{{Random: {{Range: 1, 4}} }}}}/422 305 80 82 724 84 382 -2 -4 -7 -12 -26//"
+            },
+			"When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+        {
+            "LogName": "Spouse Xeth's Gift Tastes (SVE)",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "Xeth": "{{i18n:Spouse.Xeth.GiftTastes.love.{{Random: {{Range: 1, 4}} }}}}/348 773 852 373 279 797 74 769 896 FlashShifter.StardewValleyExpandedCP_Void_Shard FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Void_Soul FlashShifter.StardewValleyExpandedCP_Swirl_Stone/{{i18n:Spouse.Xeth.GiftTastes.like.{{Random: {{Range: 1, 4}} }}}}/64 253 395 338 308 795 305 -79 xxth0.ScarletMansion_Beef.Wellington FlashShifter.StardewValleyExpandedCP_Void_Root FlashShifter.StardewValleyExpandedCP_Void_Eel /{{i18n:Spouse.Xeth.GiftTastes.dislike.{{Random: {{Range: 1, 4}} }}}}/248 768 729 649/{{i18n:Spouse.Xeth.GiftTastes.hate.{{Random: {{Range: 1, 4}} }}}}/767 421 595 772 879 -20/{{i18n:Spouse.Xeth.GiftTastes.neutral.{{Random: {{Range: 1, 4}} }}}}/422 305 80 82 724 84 382 -2 -4 -7 -12 -26//"
+            },
+            "When": {
+                "Spouse": "Xeth",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+        {
+			"Log": "Load Overworld Sprites",
+            "Action": "Load",
+            "Target": "Characters/Xeth",
+            "FromFile": "assets/Sprites/Xeth/Xeth.png"
+        },
+        {
+			"Log": "Load Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Xeth",
+            "FromFile": "assets/Portraits/Xeth.png"
+        },
+		
+		{
+            "Action": "Load",
+            "Target": "Characters/Dialogue/Xeth",
+            "FromFile": "data/blank.json"
+        },
+		{
+            "Action": "Load",
+            "Target": "Characters/Dialogue/MarriageDialogueXeth",
+            "FromFile": "data/blank.json"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/schedules/Xeth",
+            "FromFile": "assets/Schedules/Xeth/Schedule.json"
+        },
+        {
+            "Action": "Load",
+            "Target": "Strings/schedules/Xeth",
+            "FromFile": "data/blank.json"
+        },
+        {
+            "LogName": "Dialogue",
+            "Action": "Include",
+            "FromFile": "assets/Dialogue/Xeth/XethDialogue.json, assets/Dialogue/Xeth/XethMarriageDialogue.json"
+        },
+        {
+            "LogName": "ScheduleDialogue",
+            "Action": "Include",
+            "FromFile": "assets/Schedules/Xeth/ScheduleDialogue.json"
+        },
+		
+		// Babies //
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Baby",
+			"FromFile": "assets/Sprites/Children/Xeth-baby.png",
+			"When": {
+				"Relationship:Xeth": "Married"
+				
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Baby_dark",
+			"FromFile": "assets/Sprites/Children/Xeth-baby_dark.png",
+			"When": {
+				"Relationship:Xeth": "Married"
+			}
+		},
+		//  Toddlers //
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Toddler",
+			"FromFile": "assets/Sprites/Children/Xeth-Toddler_boy.png",
+			"When": {
+				"Relationship:Xeth": "Married"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Toddler_dark",
+			"FromFile": "assets/Sprites/Children/Xeth-Toddler_boy_dark.png",
+			"When": {
+				"Relationship:Xeth": "Married"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Toddler_girl",
+			"FromFile": "assets/Sprites/Children/Xeth-Toddler_girl.png",
+			"When": {
+				"Relationship:Xeth": "Married"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Toddler_girl_dark",
+			"FromFile": "assets/Sprites/Children/Xeth-Toddler_girl_dark.png",
+			"When": {
+				"Relationship:Xeth": "Married"
+			}
+		}
+	]
+}

@@ -1,0 +1,28 @@
+    {
+        "Changes": [
+			{
+                "Action": "EditData",
+                "Target": "Mods/CJBok.CheatsMenu/Warps",
+                "When": {
+                    "HasMod|contains=xxth0.ScarletMansion": true
+                },
+                "Entries": {
+                    "{{ModId}}_ScarletCourtyard": {
+                        "Id": "{{ModId}}_ScarletCourtyard",
+						"DisplayName": "{{i18n:Location.ScarletCourtyard}}",
+                        "Location": "{{ModId}}_ScarletCourtyard",
+                        "Tile": "25, 25",
+                        "SectionId": "Forest"
+                    },
+                    "{{ModId}}_ScarletMansion": {
+                        "Id": "{{ModId}}_ScarletMansion1F",
+						"DisplayName": "{{i18n:Location.ScarletMansion.1F}}",
+                        "Location": "{{ModId}}_ScarletMansion1F",
+                        "Tile": "66, 27",
+                        "SectionId": "Forest"
+                    }
+				}
+			}
+		]
+		
+	}

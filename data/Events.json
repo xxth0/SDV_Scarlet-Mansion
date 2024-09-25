@@ -1,0 +1,22 @@
+{
+	// 0 = up 1 = right 2 = down 3 = left //
+	"Changes": [
+		{
+			"LogName": "Load Location for Events",
+			"Action": "Load",
+			"Target": "Data/Events/{{ModId}}_ScarletCourtyard,Data/Events/{{ModId}}_ScarletMansion1F",
+			"FromFile": "data/blank.json"
+		},
+		{
+			"LogName": "Fridge",
+			"Action": "EditData",
+			"Target": "Data/Events/{{ModId}}_ScarletMansion1F",
+			"Entries": {
+				// Felix 4 Heart Event //
+				// This Event unlock the fridge that contains 2 free random foods everyday. In the future, I can add more custom foods there. //
+				
+				"{{ModId}}_Felix4HeartEvent/f Felix 1000/F": "playful/128 10/farmer 123 9 1 Felix 129 9 0/skippable/pause 1000/advancedMove farmer false 4 0 1 2000/faceDirection farmer 1/pause 500/emote farmer 8/question null \"{{i18n:Felix.4Heart.Event.1}}\"/pause 500/emote Felix 16/pause 200/faceDirection Felix 3/pause 500/speak Felix \"{{i18n:Felix.4Heart.Event.2}}\"/emote farmer 40/pause 1000/speak Felix \"{{i18n:Felix.4Heart.Event.3}}\"/pause 1000/ speak Felix \"{{i18n:Felix.4Heart.Event.4}}\"/pause 500/faceDirection Felix 0/pause 1000/emote farmer 40/pause 1000/emote Felix 16/jump Felix 2/pause 50/faceDirection Felix 3/speak Felix \"{{i18n:Felix.4Heart.Event.5}}\"/speak Felix \"{{i18n:Felix.4Heart.Event.6}}\"/pause 500/emote farmer 32/pause 500/speak Felix \"{{i18n:Felix.4Heart.Event.7}}\"/pause 500/speak Felix \"{{i18n:Felix.4Heart.Event.8}}\"/pause 500/faceDirection Felix 0/pause 1000/end"
+			}
+		}
+	]
+}

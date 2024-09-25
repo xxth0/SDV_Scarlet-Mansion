@@ -1,0 +1,598 @@
+{
+    "Changes": [
+	
+			// Using 1.6 Custom location, Thank you! Aba (Abagaianye) //
+		{
+			// Load Xeth's Spouse area //
+			"LogName": "Xeth's Spouse Room",
+            "Action": "Load",
+            "Target": "Maps/{{ModId}}_Xeth_Spouse_Area",
+            "FromFile": "Assets/Maps/SM_XethSpouseArea.tmx"
+        },
+		
+		{
+			// Load Xeth's Spouse area //
+			"LogName": "Xeth's Spouse Room",
+            "Action": "Load",
+            "Target": "Maps/{{ModId}}_Xeth_Spouse_Room",
+            "FromFile": "Assets/Maps/SM_XethRoom.tmx"
+        },
+		
+        {
+			// Load Scarlet Courtyard //
+			// Legacy Name: Custom_ScarletCourtyard //
+			"LogName": "Xeth's Scarlet Mansion Exterior",
+            "Action": "Load",
+            "Target": "Maps/{{ModId}}_ScarletCourtyard",
+            "FromFile": "assets/Maps/SM_ScarletCourtyard.tmx"
+        },
+		
+        {
+			// Load Scarlet Mansion 1F //
+			// Legacy Name: Custom_ScarletMansion1F //
+			"LogName": "Xeth's Scarlet Mansion Interior 1F",
+            "Action": "Load",
+            "Target": "Maps/{{ModId}}_ScarletMansion1F",
+            "FromFile": "assets/Maps/SM_1FScarletMansion.tmx",
+        },
+		
+        {
+			// Load Xeth's home: Coffin //
+			"LogName": "Xeth's Coffin NPCWarp",
+            "Action": "Load",
+            "Target": "Maps/{{ModId}}_XethCoffin",
+            "FromFile": "assets/Maps/SM_XethCoffin.tmx",
+        },
+		
+		{
+            "LogName": "Add Scarlet Courtyard to locations",
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+				// Courtyard //
+                "{{ModId}}_ScarletCourtyard": {
+                    "DisplayName": "{{i18n:Location.ScarletCourtyard}}",
+                    "DefaultArrivalTile": {
+                        "X": 25,
+                        "Y": 48
+                    },
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/{{ModId}}_ScarletCourtyard",
+                        "Type": "StardewValley.GameLocation",
+                        "AlwaysActive": false
+                    },
+					"FormerLocationNames": [ "Custom_ScarletCourtyard" ]
+                },
+				// Mansion 1F //
+				"{{ModId}}_ScarletMansion1F": {
+                    "DisplayName": "{{i18n:Location.ScarletMansion.1F}}",
+                    "DefaultArrivalTile": {
+                        "X": 66,
+                        "Y": 29
+                    },
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/{{ModId}}_ScarletMansion1F",
+                        "Type": "StardewValley.GameLocation",
+                        "AlwaysActive": false
+                    },
+					"FormerLocationNames": [ "Custom_ScarletMansion1F" ]
+				},
+				// Coffin //
+				"{{ModId}}_XethCoffin": {
+                    "DisplayName": "{{i18n:LocationScarletMansion.Xeth.Bedroom}}",
+                    "DefaultArrivalTile": {
+                        "X": 2,
+                        "Y": 2
+                    },
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/{{ModId}}_XethCoffin",
+                        "Type": "StardewValley.GameLocation",
+                        "AlwaysActive": false
+                    },
+					"FormerLocationNames": [ "Custom_XethCoffin" ]
+                },
+				
+            }
+			
+        },
+		
+		{
+			"LogName": "Edit Location contexts",
+			"Action": "EditData",
+			"Target": "Data/LocationContexts",
+			"Entries": {
+				"ScarletCourtyard": {
+					"Name": "ScarletCourtyard",
+					"MaxPassOutCost": 0,
+					"CopyWeatherFromLocation": "Default",
+					"PassOutMail": [
+						{
+							"Id": "{{ModId}}_Courtyard.PassOutC1",
+							"Mail": "{{ModId}}_PassOutInCourtyard_Billed",
+							"MaxPassOutCost": 0
+						},
+						{
+							"Id": "{{ModId}}_Courtyard.PassOutC2",
+							"Mail": "{{ModId}}_PassOutInCourtyard_NotBilled",
+							"MaxPassOutCost": 0
+						},						
+					]
+				},
+				"ScarletMansion": {
+					"Name": "ScarletMansion",
+					"MaxPassOutCost": 0,
+					"CopyWeatherFromLocation": "Default",
+					"PassOutMail": [
+						{
+							"Id": "{{ModId}}_Mansion.PassOutC1",
+							"Mail": "{{ModId}}_PassOutInMansion_Billed",
+							"MaxPassOutCost": 0
+						},
+						{
+							"Id": "{{ModId}}_Mansion.PassOutC2",
+							"Mail": "{{ModId}}_PassOutInMansion_NotBilled",
+							"MaxPassOutCost": 0
+						},						
+					]
+				},
+			}
+		},
+		
+		// ----- Map Patches from events ----- //
+		
+        {
+			// Xeth's 1 Heart invitation letter, this unlocks the front door//
+			"LogName": "Unlocking Scarlet Mansion Door (1Heart with Xeth)",
+            "Action": "EditMap",
+            "Target": "Maps/{{ModId}}_ScarletCourtyard",
+            "MapTiles": [
+                {
+                    "Position": { "X": 24, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "LockedDoorWarp 65 29 {{ModId}}_ScarletMansion1F 600 2600"
+                    }
+                },
+				{
+                    "Position": { "X": 26, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "LockedDoorWarp 67 29 {{ModId}}_ScarletMansion1F 600 2600"
+                    }
+                }
+            ],
+			"When": {
+				"HasSeenEvent |contains={{ModId}}_XethHeartEventMail.1": true
+			}
+        },
+		
+		{
+			// Felix's 4 Heart Event, Fridge shop opens, 2 free foods everyday //
+			// Tells player to come back tomorrow because changes were applied the following day for some reason //
+			"LogName": "Felix's fridge leftover (4 Heart with Felix)",
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_ScarletMansion1F",
+			"MapTiles": [
+                {
+                    "Position": { "X": 129, "Y": 15 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "OpenShop {{ModId}}.FelixFridge"
+                    }
+                }
+			],
+			"When": {
+				"HasSeenEvent |contains={{ModId}}_Felix4HeartEvent": true
+			}
+		},
+		
+        {
+			// Vanilla Secret Wood Map Edits //
+            "Action": "EditMap",
+            "Target": "Maps/Woods",
+			"FromFile": "assets/Maps/Woods_edited.tmx",
+			"Update": "OnLocationChange",
+			"PatchMode": "Replace",
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 8,
+                "Height": 8
+            },
+            "ToArea": {
+                "X": 43,
+                "Y": 0,
+                "Width": 8,
+                "Height": 8
+            },
+            "AddWarps": [
+                "45 0 {{ModId}}_ScarletCourtyard 24 48",
+				"46 0 {{ModId}}_ScarletCourtyard 25 48",
+				"47 0 {{ModId}}_ScarletCourtyard 26 48"
+            ],
+			"MapProperties": {
+					"NPCWarp": "46 1 {{ModId}}_ScarletCourtyard 25 49"
+			},
+			"When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+            }
+        },
+		
+        {
+			// Eidt Warp for SVE Secret Woods //
+            "Action": "EditMap",
+            "Target": "Maps/Woods",
+            "FromFile": "assets/Maps/Woods_SVE_edited.tmx",
+            "Update": "OnLocationChange",
+			"PatchMode": "Replace",
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 10,
+                "Height": 10
+            },
+            "ToArea": {
+                "X": 24,
+                "Y": 0,
+                "Width": 10,
+                "Height": 10
+            },
+            "AddWarps": [
+                "27 1 {{ModId}}_ScarletCourtyard 24 48",
+                "28 1 {{ModId}}_ScarletCourtyard 25 48",
+				"29 1 {{ModId}}_ScarletCourtyard 26 48"
+            ],
+			"MapProperties": {
+					"NPCWarp": "26 2 {{ModId}}_ScarletCourtyard 25 49"
+			},
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+		
+        {
+			// Remove SVE bushes, though it affects only on new save //
+			// Accessing the Courtyard mid-installation should be okay //
+			"LogName": "Remove SVE bushes",
+            "Action": "EditMap",
+            "Target": "Maps/Woods",
+            "Update": "OnLocationChange",
+			"PatchMode": "Replace",
+			"MapTiles": [
+				{
+					"Position": { "X": 25, "Y": 4 },
+					"Layer": "Paths",
+					"Remove": true
+				},
+				{
+					"Position": { "X": 26, "Y": 4 },
+					"Layer": "Paths",
+					"Remove": true
+				},
+				{
+					"Position": { "X": 27, "Y": 5 },
+					"Layer": "Paths",
+					"Remove": true
+				}
+			],
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+		
+		{
+			// Custom Location Edits //
+			"LogName": "Add Warp Points to Woods for Courtyard Vanilla",
+            "Action": "EditMap",
+            "Target": "Maps/{{ModId}}_ScarletCourtyard",
+			"AddWarps": [
+                "24 49 Woods 45 1",
+				"25 49 Woods 45 1",
+				"26 49 Woods 46 1",
+				"27 49 Woods 47 1",
+            ],
+			"MapProperties": {
+					"NPCWarp": "24 19 {{ModId}}_ScarletMansion1F 65 29",
+			},
+			"When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+            }
+        },
+		
+		{
+			"LogName": "Add Warp Points to Woods for Courtyard SVE",
+            "Action": "EditMap",
+            "Target": "Maps/{{ModId}}_ScarletCourtyard",
+            "AddWarps": [
+                "24 49 Woods 27 2",
+				"25 49 Woods 28 2",
+				"26 49 Woods 28 2",
+				"27 49 Woods 29 2"
+            ],
+			"MapProperties": {
+					"NPCWarp": "24 19 {{ModId}}_ScarletMansion1F 65 29",
+					"LocationContext": "ScarletCourtyard"
+			},
+			"When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+		
+		{
+			"LogName": "Add Warp Points for Mansion 1st Floor",
+            "Action": "EditMap",
+            "Target": "Maps/{{ModId}}_ScarletMansion1F",
+            "AddWarps": [
+                "65 31 {{ModId}}_ScarletCourtyard 24 20",
+				"66 31 {{ModId}}_ScarletCourtyard 24 20",
+				"67 31 {{ModId}}_ScarletCourtyard 26 20",
+				"68 31 {{ModId}}_ScarletCourtyard 26 20"
+            ],
+			"MapProperties": {
+					"NPCWarp": "66 31 {{ModId}}_ScarletCourtyard 24 20 66 13 {{ModId}}_XethCoffin 2 1",
+					"LocationContext": "ScarletMansion"
+			}
+        },
+		
+		{
+			"LogName": "Add Warp Points for Xeth's Coffin",
+            "Action": "EditMap",
+            "Target": "Maps/{{ModId}}_XethCoffin",
+            "AddWarps": [
+                "2 0 {{ModId}}_ScarletMansion1F 66 12"
+            ],
+			"MapProperties": {
+					"NPCWarp": "2 0 {{ModId}}_ScarletMansion1F 66 12",
+					"LocationContext": "ScarletMansion"
+			}
+        },
+		
+		// Strings from maps //
+		{
+            "Action": "EditData",
+            "Target": "Strings/StringsFromMaps",
+            "Entries": {
+				// Xeth's Spouse Room //
+                "XethRoom.1": "{{i18n:XethRoom.1}}",
+                "XethRoom.2": "{{i18n:XethRoom.2}}",
+                "XethRoom.3": "{{i18n:XethRoom.3}}",
+                "XethRoom.4": "{{i18n:XethRoom.4}}",
+                "XethRoom.5": "{{i18n:XethRoom.5}}",
+                "XethRoom.6": "{{i18n:XethRoom.6}}",
+				"XethRoom.7": "{{i18n:XethRoom.7}}",
+				
+				// Scarlet Courtyard //
+				"ScarletCourtyard.1": "{{i18n:ScarletCourtyard.1}}",
+				"ScarletCourtyard.2": "{{i18n:ScarletCourtyard.2}}",
+				"ScarletCourtyard.3": "{{i18n:ScarletCourtyard.3}}",
+				"ScarletCourtyard.4": "{{i18n:ScarletCourtyard.4_{{Random: 1, 5}} }}",
+				"ScarletCourtyard.LockedDoor": "{{i18n:ScarletCourtyard.LockedDoor}}",
+				
+				// Scarlet Mansion F1 //
+				"ScarletMansion.Library.1": "{{i18n:ScarletMansion.Library.1}}",
+				"ScarletMansion.Library.2": "{{i18n:ScarletMansion.Library.2}}",
+				"ScarletMansion.Library.3": "{{i18n:ScarletMansion.Library.3}}",
+				"ScarletMansion.Library.4": "{{i18n:ScarletMansion.Library.4}}",
+				"ScarletMansion.Library.5": "{{i18n:ScarletMansion.Library.5}}",
+				"ScarletMansion.Library.6": "{{i18n:ScarletMansion.Library.6}}",
+				"ScarletMansion.Library.7": "{{i18n:ScarletMansion.Library.7}}",
+				"ScarletMansion.Library.8": "{{i18n:ScarletMansion.Library.8}}",
+				"ScarletMansion.Library.9": "{{i18n:ScarletMansion.Library.9}}",
+				"ScarletMansion.Library.10": "{{i18n:ScarletMansion.Library.10}}",
+				"ScarletMansion.Library.11": "{{i18n:ScarletMansion.Library.11}}",
+				
+				"ScarletMansion.CollectionArtwork.1": "{{i18n:ScarletMansion.CollectionArtwork.1}}",
+				"ScarletMansion.CollectionArtwork.2": "{{i18n:ScarletMansion.CollectionArtwork.2}}",
+				"ScarletMansion.CollectionArtwork.3": "{{i18n:ScarletMansion.CollectionArtwork.3}}",
+				"ScarletMansion.CollectionArtwork.4": "{{i18n:ScarletMansion.CollectionArtwork.4}}",
+				"ScarletMansion.CollectionArtwork.5": "{{i18n:ScarletMansion.CollectionArtwork.5}}",
+				"ScarletMansion.CollectionArtwork.6": "{{i18n:ScarletMansion.CollectionArtwork.6}}",
+				"ScarletMansion.CollectionArtwork.7": "{{i18n:ScarletMansion.CollectionArtwork.7}}",
+				"ScarletMansion.CollectionRoom.1": "{{i18n:ScarletMansion.CollectionRoom.1}}",
+				"ScarletMansion.CollectionRoom.2": "{{i18n:ScarletMansion.CollectionRoom.2}}",
+				
+				
+				"ScarletMansion.Kitchen.1": "{{i18n:ScarletMansion.Kitchen.1_{{Random: {{Range: 1, 7}} }}}}",
+				"ScarletMansion.Kitchen.2": "{{i18n:ScarletMansion.Kitchen.2}}",
+				"ScarletMansion.Kitchen.3": "{{i18n:ScarletMansion.Kitchen.3}}",
+				"ScarletMansion.Kitchen.4": "{{i18n:ScarletMansion.Kitchen.4}}",
+				"ScarletMansion.Kitchen.5": "{{i18n:ScarletMansion.Kitchen.5}}",
+				"ScarletMansion.Kitchen.6": "{{i18n:ScarletMansion.Kitchen.6}}"
+            }
+        },
+		
+
+		{
+			"LogName": "Remove Courtyard 4_5 once invitation letter is obtained",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromMaps",
+            "Entries": {
+				"ScarletCourtyard.4": "{{i18n:ScarletCourtyard.4_{{Random: 1, 4}} }}"
+			},
+			"When": {
+				"HasSeenEvent |contains={{ModId}}_XethHeartEventMail.1": true
+			}
+		},
+		
+		{
+			// Add three more dialogue for Chub after seen Felix's 4 Heart Event //
+            "Action": "EditData",
+            "Target": "Strings/StringsFromMaps",
+            "Entries": {
+				"ScarletMansion.Kitchen.1": "{{i18n:ScarletMansion.Kitchen.1_{{Random: {{Range: 1, 10}} }}}}",
+			},
+			"When": {
+				"HasSeenEvent |contains={{ModId}}_Felix4HeartEvent": true
+			}
+		},
+		
+		{
+			// This part displays whenever Xeth is inside coffin or not //
+			// after Player inspects the coofin. //
+            "Action": "EditData",
+            "Target": "Strings/StringsFromMaps",
+			"Update": "OnTimeChange",
+            "When": {
+                "HasValue:XethCurrentLocation:{{ModId}}_XethCoffin": true
+            },
+            "Entries": {
+                "ScarletMansion.Coffin": "{{i18n:ScarletMansion.Coffin.Occupied}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/StringsFromMaps",
+			"Update": "OnTimeChange",
+			"When": {
+                "HasValue:XethCurrentLocation:{{ModId}}_XethCoffin": false
+            },
+            "Entries": {
+                "ScarletMansion.Coffin": "{{i18n:ScarletMansion.Coffin.Empty}}"
+            }
+        },
+		
+		{
+			// Chair tiles //
+			"Action": "EditData",
+			"Target": "Data/ChairTiles",
+			"Entries": {
+				"ScarletMansionTileSheet/13/6": "1/1/down/couch/-1/-1/false",
+				"ScarletMansionTileSheet/14/6": "1/1/down/couch/-1/-1/false",
+				"ScarletMansionTileSheet/14/8": "1/1/left/couch/-1/-1/false",
+				
+				"ScarletMansionTileSheet/6/24": "1/1/down/chair/-1/-1/false",
+				"ScarletMansionTileSheet/7/26": "1/1/down/chair/-1/-1/false",
+				"ScarletMansionTileSheet/8/26": "1/1/right/chair/-1/-1/false",
+				"ScarletMansionTileSheet/9/26": "1/1/left/chair/-1/-1/false",
+				"ScarletMansionTileSheet/10/26": "1/1/up/chair/-1/-1/false"
+			}
+		},
+		
+		// Edit Scarlet Mansion Tilesheet for each season //
+		// Indoor windows change every season //
+		
+		// Thank you! Aba, Pau and Avi! //
+		
+		{
+			"LogName": "Load Kitchen window tilesheet",
+			"Action": "Load",
+			"Target": "Maps/ScarletMansionTileSheet3",
+			"FromFile": "assets/Maps/DynamicIndoors/Tilesheets/spring_ScarletMansionTileSheet3.png"
+		},
+		
+		{
+			"LogName": "Edit Spring tilesheet",
+			"Action": "EditImage",
+			"Target": "Maps/ScarletMansionTileSheet3",
+			"FromFile": "assets/Maps/DynamicIndoors/Tilesheets/spring_ScarletMansionTileSheet3.png",
+			"When": {
+				"Season": "Spring"
+			}
+		},
+		
+		{
+			"LogName": "Edit Summer tilesheet",
+			"Action": "EditImage",
+			"Target": "Maps/ScarletMansionTileSheet3",
+			"FromFile": "assets/Maps/DynamicIndoors/Tilesheets/summer_ScarletMansionTileSheet3.png",
+			"When": {
+				"Season": "Summer"
+			}
+		},
+		
+		{
+			"LogName": "Edit Fall tilesheet",
+			"Action": "EditImage",
+			"Target": "Maps/ScarletMansionTileSheet3",
+			"FromFile": "assets/Maps/DynamicIndoors/Tilesheets/fall_ScarletMansionTileSheet3.png",
+			"When": {
+				"Season": "Fall"
+			}
+		},
+		
+		{
+			"LogName": "Edit Winter tilesheet",
+			"Action": "EditImage",
+			"Target": "Maps/ScarletMansionTileSheet3",
+			"FromFile": "assets/Maps/DynamicIndoors/Tilesheets/winter_ScarletMansionTileSheet3.png",
+			"When": {
+				"Season": "Winter"
+			}
+		},
+		
+			// Overlaying tiles from window map into main map //
+		{
+			"LogName": "Edit windows into the kitchen",
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_ScarletMansion1F",
+			"FromFile": "assets/Maps/DynamicIndoors/SM_KitchenWindow.tmx",
+			"FromArea": {
+				"X": 0,
+				"Y": 0,
+				"Width": 7,
+				"Height": 3
+			},
+			"ToArea": {
+				"X": 121,
+				"Y": 4,
+				"Width": 7,
+				"Height": 3
+			},
+			"PatchMode": "Overlay",
+		},
+		
+		{
+			"LogName": "Edit windows into dining room",
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_ScarletMansion1F",
+			"FromFile": "assets/Maps/DynamicIndoors/SM_DiningWindow.tmx",
+			"FromArea": {
+				"X": 0,
+				"Y": 0,
+				"Width": 18,
+				"Height": 6
+			},
+			"ToArea": {
+				"X": 94,
+				"Y": 3,
+				"Width": 18,
+				"Height": 6
+			},
+			"PatchMode": "Overlay",
+		},
+		
+		{
+			"LogName": "Edit windows into the library",
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_ScarletMansion1F",
+			"FromFile": "assets/Maps/DynamicIndoors/SM_LibraryWindow.tmx",
+			"FromArea": {
+				"X": 0,
+				"Y": 0,
+				"Width": 4,
+				"Height": 5
+			},
+			"ToArea": {
+				"X": 11,
+				"Y": 4,
+				"Width": 4,
+				"Height": 5
+			},
+			"PatchMode": "Overlay",
+		},
+	  
+		{
+			// This also combines the light from 4x3 eight windows at the hallway //
+			// Be careful, don't modify anything or it will break the day night light tiles //
+			"LogName": "Edit Day/Night time tiles",
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_ScarletMansion1F",
+			"PatchMode": "Overlay",
+			"MapProperties": {
+				"DayTiles": "Back3 21 21 26 Back3 22 21 27 Back3 23 21 28 Back3 29 21 26 Back3 30 21 27 Back3 31 21 28 Back3 42 21 26 Back3 43 21 27 Back3 44 21 28 Back3 50 21 26 Back3 51 21 27 Back3 52 21 28 Back3 21 22 51 Back3 22 22 52 Back3 23 22 53 Back3 29 22 51 Back3 30 22 52 Back3 31 22 53 Back3 42 22 51 Back3 43 22 52 Back3 44 22 53 Back3 50 22 51 Back3 51 22 52 Back3 52 22 53 Back3 21 23 76 Back3 22 23 77 Back3 23 23 78 Back3 29 23 76 Back3 30 23 77 Back3 31 23 78 Back3 42 23 76 Back3 43 23 77 Back3 44 23 78 Back3 50 23 76 Back3 51 23 77 Back3 52 23 78 Back3 21 24 101 Back3 22 24 102 Back3 23 24 103 Back3 29 24 101 Back3 30 24 102 Back3 31 24 103 Back3 42 24 101 Back3 43 24 102 Back3 44 24 103 Back3 50 24 101 Back3 51 24 102 Back3 52 24 103 Back3 81 21 26 Back3 82 21 27 Back3 83 21 28 Back3 89 21 26 Back3 90 21 27 Back3 91 21 28 Back3 102 21 26 Back3 103 21 27 Back3 104 21 28 Back3 110 21 26 Back3 111 21 27 Back3 112 21 28 Back3 81 22 51 Back3 82 22 52 Back3 83 22 53 Back3 89 22 51 Back3 90 22 52 Back3 91 22 53 Back3 102 22 51 Back3 103 22 52 Back3 104 22 53 Back3 110 22 51 Back3 111 22 52 Back3 112 22 53 Back3 81 23 76 Back3 82 23 77 Back3 83 23 78 Back3 89 23 76 Back3 90 23 77 Back3 91 23 78 Back3 102 23 76 Back3 103 23 77 Back3 104 23 78 Back3 110 23 76 Back3 111 23 77 Back3 112 23 78 Back3 81 24 101 Back3 82 24 102 Back3 83 24 103 Back3 89 24 101 Back3 90 24 102 Back3 91 24 103 Back3 102 24 101 Back3 103 24 102 Back3 104 24 103 Back3 110 24 101 Back3 111 24 102 Back3 112 24 103 Back2 121 4 26 Back2 122 4 27 Back2 126 4 28 Back2 127 4 29 Back2 121 5 51 Back2 122 5 52 Back2 126 5 53 Back2 127 5 54 Back2 121 6 76 Back2 122 6 77 Back2 126 6 78 Back2 127 6 79 Back2 11 4 30 Back2 12 4 31 Back2 13 4 32 Back2 14 4 33 Back2 11 5 55 Back2 12 5 56 Back2 13 5 57 Back2 14 5 58 Back2 11 6 80 Back2 12 6 81 Back2 13 6 82 Back2 14 6 83 Back2 11 7 105 Back2 12 7 106 Back2 13 7 107 Back2 14 7 108 Back2 11 8 130 Back2 12 8 131 Back2 13 8 132 Back2 14 8 133 Back3 94 4 38 Back3 95 4 39 Back3 96 4 40 Back3 97 4 41 Back3 100 3 42 Back3 102 3 43 Back3 103 3 44 Back3 105 3 45 Back3 108 4 46 Back3 109 4 47 Back3 110 4 48 Back3 111 4 49 Back3 94 5 63 Back3 95 5 64 Back3 96 5 65 Back3 97 5 66 Back3 100 4 67 Back3 102 4 68 Back3 103 4 69 Back3 105 4 70 Back3 108 5 71 Back3 109 5 72 Back3 110 5 73 Back3 111 5 74 Back3 94 6 88 Back3 95 6 89 Back3 96 6 90 Back3 97 6 91 Back3 100 5 92 Back3 102 5 93 Back3 103 5 94 Back3 105 5 95 Back3 108 6 96 Back3 109 6 97 Back3 110 6 98 Back3 111 6 99 Back3 94 7 113 Back3 95 7 114 Back3 96 7 115 Back3 97 7 116 Back3 100 6 117 Back3 102 6 118 Back3 103 6 119 Back3 105 6 120 Back3 108 7 121 Back3 109 7 122 Back3 110 7 123 Back3 111 7 124 Back3 94 8 138 Back3 95 8 139 Back3 96 8 140 Back3 97 8 141 Back3 100 7 142 Back3 102 7 143 Back3 103 7 144 Back3 105 7 145 Back3 108 8 146 Back3 109 8 147 Back3 110 8 148 Back3 111 8 149",
+				"NightTiles": "Back3 21 21 29 Back3 22 21 30 Back3 23 21 31 Back3 29 21 29 Back3 30 21 30 Back3 31 21 31 Back3 42 21 29 Back3 43 21 30 Back3 44 21 31 Back3 50 21 29 Back3 51 21 30 Back3 52 21 31 Back3 21 22 54 Back3 22 22 55 Back3 23 22 56 Back3 29 22 54 Back3 30 22 55 Back3 31 22 56 Back3 42 22 54 Back3 43 22 55 Back3 44 22 56 Back3 50 22 54 Back3 51 22 55 Back3 52 22 56 Back3 21 23 79 Back3 22 23 80 Back3 23 23 81 Back3 29 23 79 Back3 30 23 80 Back3 31 23 81 Back3 42 23 79 Back3 43 23 80 Back3 44 23 81 Back3 50 23 79 Back3 51 23 80 Back3 52 23 81 Back3 21 24 104 Back3 22 24 105 Back3 23 24 106 Back3 29 24 104 Back3 30 24 105 Back3 31 24 106 Back3 42 24 104 Back3 43 24 105 Back3 44 24 106 Back3 50 24 104 Back3 51 24 105 Back3 52 24 106 Back3 81 21 29 Back3 82 21 30 Back3 83 21 31 Back3 89 21 29 Back3 90 21 30 Back3 91 21 31 Back3 102 21 29 Back3 103 21 30 Back3 104 21 31 Back3 110 21 29 Back3 111 21 30 Back3 112 21 31 Back3 81 22 54 Back3 82 22 55 Back3 83 22 56 Back3 89 22 54 Back3 90 22 55 Back3 91 22 56 Back3 102 22 54 Back3 103 22 55 Back3 104 22 56 Back3 110 22 54 Back3 111 22 55 Back3 112 22 56 Back3 81 23 79 Back3 82 23 80 Back3 83 23 81 Back3 89 23 79 Back3 90 23 80 Back3 91 23 81 Back3 102 23 79 Back3 103 23 80 Back3 104 23 81 Back3 110 23 79 Back3 111 23 80 Back3 112 23 81 Back3 81 24 104 Back3 82 24 105 Back3 83 24 106 Back3 89 24 104 Back3 90 24 105 Back3 91 24 106 Back3 102 24 104 Back3 103 24 105 Back3 104 24 106 Back3 110 24 104 Back3 111 24 105 Back3 112 24 106 Back2 121 4 101 Back2 122 4 102 Back2 126 4 103 Back2 127 4 104 Back2 121 5 126 Back2 122 5 127 Back2 126 5 128 Back2 127 5 129 Back2 121 6 151 Back2 122 6 152 Back2 126 6 153 Back2 127 6 154 Back2 11 4 34 Back2 12 4 35 Back2 13 4 36 Back2 14 4 37 Back2 11 5 59 Back2 12 5 60 Back2 13 5 61 Back2 14 5 62 Back2 11 6 84 Back2 12 6 85 Back2 13 6 86 Back2 14 6 87 Back2 11 7 109 Back2 12 7 110 Back2 13 7 111 Back2 14 7 112 Back2 11 8 134 Back2 12 8 135 Back2 13 8 136 Back2 14 8 137 Back3 94 4 163 Back3 95 4 164 Back3 96 4 165 Back3 97 4 166 Back3 100 3 167 Back3 102 3 168 Back3 103 3 169 Back3 105 3 170 Back3 108 4 171 Back3 109 4 172 Back3 110 4 173 Back3 111 4 174 Back3 94 5 188 Back3 95 5 189 Back3 96 5 190 Back3 97 5 191 Back3 100 4 192 Back3 102 4 193 Back3 103 4 194 Back3 105 4 195 Back3 108 5 196 Back3 109 5 197 Back3 110 5 198 Back3 111 5 199 Back3 94 6 213 Back3 95 6 214 Back3 96 6 215 Back3 97 6 216 Back3 100 5 217 Back3 102 5 218 Back3 103 5 219 Back3 105 5 220 Back3 108 6 221 Back3 109 6 222 Back3 110 6 223 Back3 111 6 224 Back3 94 7 238 Back3 95 7 239 Back3 96 7 240 Back3 97 7 241 Back3 100 6 242 Back3 102 6 243 Back3 103 6 244 Back3 105 6 245 Back3 108 7 246 Back3 109 7 247 Back3 110 7 248 Back3 111 7 249 Back3 94 8 263 Back3 95 8 264 Back3 96 8 265 Back3 97 8 266 Back3 100 7 267 Back3 102 7 268 Back3 103 7 269 Back3 105 7 270 Back3 108 8 271 Back3 109 8 272 Back3 110 8 273 Back3 111 8 274"
+				}
+		},
+	  
+	]
+}

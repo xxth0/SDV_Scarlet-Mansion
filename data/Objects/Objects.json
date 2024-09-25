@@ -1,0 +1,48 @@
+{
+    "Changes": [
+        {
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Mods/xxth0.ScarletMansion/Beef.Wellington",
+            "FromFile": "assets/Pngs/Items/Beef_Wellington.png"
+        },
+      {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                    "xxth0.ScarletMansion_Beef.Wellington": {
+                    "Name": "Beef.Wellington",
+                    "DisplayName": "{{i18n:SM.object.Beef.Wellington.name}}",
+                    "Description": "{{i18n:SM.object.Beef.Wellington.description}}",
+                    "Type": "Basic",
+                    "Category": -7,
+                    "Price": 5000,
+                    "Texture": "Mods\\xxth0.ScarletMansion\\Beef.Wellington",
+                    "SpriteIndex": 0,
+                    "Edibility": 160,
+                    "IsDrink": false,
+                    "ExcludeFromFishingCollection": true,
+                    "ExcludeFromShippingCollection": true,
+                    "ExcludeFromRandomSale": true,
+                      "Buffs": [
+                        {
+                          "Duration": 2000,
+                          "CustomAttributes": {
+                            "FarmingLevel": 0,
+                            "FishingLevel": 2,
+                            "MiningLevel": 0,
+                            "LuckLevel": 3,
+                            "ForagingLevel": 0,
+                            "MaxStamina": 100,
+                            "MagneticRadius": 0,
+                            "Speed": 1,
+                            "Defense": 0,
+                            "Attack": 0
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+        ]
+}

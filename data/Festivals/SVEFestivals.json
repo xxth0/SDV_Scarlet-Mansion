@@ -1,0 +1,26 @@
+{
+    "Changes": [
+		/*************  Fall 27 Spririt's Eve SVE *************/
+      {
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "TextOperations": [
+          {
+            "Operation": "Append",
+            "Target": ["Entries", "Set-Up_additionalCharacters"],
+            "Value": "Xeth 38 58 2",
+            "Delimiter": "/"
+          }
+        ]
+      },
+	  
+      /*************  Fall 27 Dialogue SVE *************/
+      {
+        "Action": "EditData",
+        "Target": "data/festivals/fall27",
+        "Entries": {
+          "Xeth": "{{i18n:Xeth.SVE.Fall.27.Festival}}"
+        }
+      }
+	]
+}

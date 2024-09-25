@@ -1,0 +1,217 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+	  "When": {
+		  "Season": "Spring, Summer"
+	  },
+      "Entries": {
+		"{{ModId}}.FelixFridge": {
+			"Owners": [
+				{
+                      "Condition": "TIME 600 2600",
+                      "Portrait": null,
+                      "Dialogues": null,
+					  "ClosedMessage": "{{i18n:ScarletMansion.Kitchen.FelixFridge}}",
+					  "Name": "None"
+				}
+			],
+			"Items": [
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_2",
+					"Price": 0,
+					"ItemId": "(O){{Random: 195, 197, 198, 199, 201, 202, 206, 212, 213, 220, 221, 224, 228, 232, 233, 234, 240}}",
+					"AvailableStock": 1
+				},
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_3",
+					"Price": 0,
+					"ItemId": "(O){{Random: 204, 226, 265, 732, 731, 904, 905}}",
+					"AvailableStock": 1
+				},
+			]
+		}
+	  }
+	},
+	
+	{
+		// Add More food to the fridge during Fall and Winter //
+      "Action": "EditData",
+      "Target": "Data/Shops",
+	  "When": {
+		  "Season": "Fall, Winter"
+	  },
+      "Entries": {
+		"{{ModId}}.FelixFridge": {
+			"Owners": [
+				{
+                      "Condition": "TIME 600 2600",
+                      "Portrait": null,
+                      "Dialogues": null,
+					  "ClosedMessage": "{{i18n:ScarletMansion.Kitchen.FelixFridge}}",
+					  "Name": "None"
+				}
+			],
+			"Items": [
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_2",
+					"Price": 0,
+					"ItemId": "(O){{Random: 195, 197, 198, 199, 201, 202, 206, 212, 213, 220, 221, 224, 228, 232, 233, 234, 240}}",
+					"AvailableStock": "{{Random: {{Range: 1, 2}} }}"
+				},
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_3",
+					"Price": 0,
+					"ItemId": "(O){{Random: 204, 226, 265, 732, 731, 904, 905}}",
+					"AvailableStock": 1
+				},
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_4",
+					"Price": 0,
+					"ItemId": "(O){{Random: 205, 208, 230, 231, 235, 236, 238, 608, 611, 612}}",
+					"AvailableStock": 1
+				},
+			]
+		}
+	  }
+	},
+	
+	// Add Beef Wellington to the shop after 8+ Hearts //
+	{
+      "Action": "EditData",
+      "Target": "Data/Shops",
+	  "When": {
+		  "Season": "Spring, Summer",
+		  "Hearts:Felix": "8, 9, 10"
+	  },
+      "Entries": {
+		"{{ModId}}.FelixFridge": {
+			"Owners": [
+				{
+                      "Condition": "TIME 600 2600",
+                      "Portrait": null,
+                      "Dialogues": null,
+					  "ClosedMessage": "{{i18n:ScarletMansion.Kitchen.FelixFridge}}",
+					  "Name": "None"
+				}
+			],
+			"Items": [
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_1",
+					"Price": 10000,
+					"ItemId": "(O){{ModId}}_Beef.Wellington",
+					"AvailableStock": 1
+				},
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_2",
+					"Price": 0,
+					"ItemId": "(O){{Random: 195, 197, 198, 199, 201, 202, 206, 212, 213, 220, 221, 224, 228, 232, 233, 234, 240}}",
+					"AvailableStock": 1
+				},
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_3",
+					"Price": 0,
+					"ItemId": "(O){{Random: 204, 226, 265, 732, 731, 904, 905}}",
+					"AvailableStock": 1
+				},
+			]
+		}
+	  }
+	},
+	
+	{
+		// Add More food to the fridge during Fall and Winter //
+      "Action": "EditData",
+      "Target": "Data/Shops",
+	  "When": {
+		  "Season": "Fall, Winter"
+	  },
+      "Entries": {
+		"{{ModId}}.FelixFridge": {
+			"Owners": [
+				{
+                      "Condition": "TIME 600 2600",
+                      "Portrait": null,
+                      "Dialogues": null,
+					  "ClosedMessage": "{{i18n:ScarletMansion.Kitchen.FelixFridge}}",
+					  "Name": "None"
+				}
+			],
+			"Items": [
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_2",
+					"Price": 0,
+					"ItemId": "(O){{Random: 195, 197, 198, 199, 201, 202, 206, 212, 213, 220, 221, 224, 228, 232, 233, 234, 240}}",
+					"AvailableStock": "{{Random: {{Range: 1, 2}} }}"
+				},
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_3",
+					"Price": 0,
+					"ItemId": "(O){{Random: 204, 226, 265, 732, 731, 904, 905}}",
+					"AvailableStock": 1
+				},
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_4",
+					"Price": 0,
+					"ItemId": "(O){{Random: 205, 208, 230, 231, 235, 236, 238, 608, 611, 612}}",
+					"AvailableStock": 1
+				},
+			]
+		}
+	  }
+	},
+	
+	{
+		// Add Beef Wellington to the shop after 8+ Hearts //
+      "Action": "EditData",
+      "Target": "Data/Shops",
+	  "When": {
+		  "Season": "Fall, Winter",
+		  "Hearts:Felix": "8, 9, 10"
+	  },
+      "Entries": {
+		"{{ModId}}.FelixFridge": {
+			"Owners": [
+				{
+                      "Condition": "TIME 600 2600",
+                      "Portrait": null,
+                      "Dialogues": null,
+					  "ClosedMessage": "{{i18n:ScarletMansion.Kitchen.FelixFridge}}",
+					  "Name": "None"
+				}
+			],
+			"Items": [
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_1",
+					"Price": 10000,
+					"ItemId": "(O){{ModId}}_Beef.Wellington",
+					"AvailableStock": 1
+				},
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_2",
+					"Price": 0,
+					"ItemId": "(O){{Random: 195, 197, 198, 199, 201, 202, 206, 212, 213, 220, 221, 224, 228, 232, 233, 234, 240}}",
+					"AvailableStock": "{{Random: {{Range: 1, 2}} }}"
+				},
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_3",
+					"Price": 0,
+					"ItemId": "(O){{Random: 204, 226, 265, 732, 731, 904, 905}}",
+					"AvailableStock": 1
+				},
+				{
+					"Id": "{{ModId}}.FelixFridge_Item_4",
+					"Price": 0,
+					"ItemId": "(O){{Random: 205, 208, 230, 231, 235, 236, 238, 608, 611, 612}}",
+					"AvailableStock": 1
+				},
+			]
+		}
+	  }
+	},
+	
+	
+	
+	]
+}

@@ -1,0 +1,84 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "XethPiano1": {
+          "Id": "XethPiano1",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/Audio/MyPrinceMyKingdom.ogg}}"
+          ],
+          "Category": "Music",
+          "StreamedVorbis": true,
+          "Looped": true
+        }
+      }
+    },
+	{
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "XethPiano2": {
+          "Id": "XethPiano2",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/Audio/Borderless.ogg}}"
+          ],
+          "Category": "Music",
+          "StreamedVorbis": true,
+          "Looped": true
+        }
+      }
+    },
+	
+	// Play music on specific day //
+	// Xeth plays My Prince My Kingdom on Friday Winter //
+	{
+        "Action": "EditMap",
+        "Target": "Maps/Custom_ScarletMansion1F",
+        "When": {
+            "Season": "Spring",
+            "DayOfWeek": "Friday"
+        },
+        "MapProperties": {
+            "Music": "XethPiano1"
+        }
+    },
+	// Clear on following day //
+	{
+        "Action": "EditMap",
+        "Target": "Maps/Custom_ScarletMansion1F",
+        "When": {
+            "Season": "Spring",
+            "DayOfWeek": "Saturday"
+        },
+        "MapProperties": {
+            "Music": null 
+        }
+    },
+	// Xeth plays Borderless on Sunday Winter //
+	{
+        "Action": "EditMap",
+        "Target": "Maps/Custom_ScarletMansion1F",
+        "When": {
+            "Season": "Spring",
+             "DayOfWeek": "Sunday"
+            },
+        "MapProperties": {
+            "Music": "XethPiano2"
+        }
+    },
+	// Clear on following day //
+	{
+        "Action": "EditMap",
+        "Target": "Maps/Custom_ScarletMansion1F",
+        "When": {
+            "Season": "Spring",
+            "DayOfWeek": "Monday"
+        },
+        "MapProperties": {
+            "Music": null 
+         }
+    }
+  ]
+}

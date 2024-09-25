@@ -1,0 +1,629 @@
+{
+    "Changes": [
+        {
+			"LogName": "Xeth's Dialogue Y1 (Door Locked)",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Xeth",
+			"When": {
+				"OddYear": true,
+				"HasSeenEvent |contains={{ModId}}_XethHeartEventMail.1": false
+			},
+            "Entries": {
+				
+				"AcceptBirthdayGift_Loved": "{{i18n:Xeth.GiftTastes.Birthday.love}}",
+				"AcceptBirthdayGift_Liked": "{{i18n:Xeth.GiftTastes.Birthday.like}}",
+				"AcceptBirthdayGift_Neutral": "{{i18n:Xeth.GiftTastes.Birthday.neutral}}",
+				"AcceptBirthdayGift_Disliked": "{{i18n:Xeth.GiftTastes.Birthday.dislike}}",
+				"AcceptBirthdayGift_Hated": "{{i18n:Xeth.GiftTastes.Birthday.hate}}",
+				
+				"AcceptGift_(O)348": "{{i18n:Xeth.Gift.Wine}}",
+				"AcceptGift_(O)767": "{{i18n:Xeth.Gift.Bat.Wings}}",
+				"AcceptGift_(O)773": "{{i18n:Xeth.Gift.Life.Elixir}}",
+				"AcceptGift_(O)852": "{{i18n:Xeth.Gift.Dragon.Tooth}}",
+				"AcceptGift_(O)373": "{{i18n:Xeth.Gift.Golden.Pumpkin}}",
+				"AcceptGift_(O)279": "{{i18n:Xeth.Gift.Magic.Rock.Candy}}",
+				"AcceptGift_(O)797": "{{i18n:Xeth.Gift.Pearl}}",
+				"AcceptGift_(O)74": "{{i18n:Xeth.Gift.Prismatic.Shard}}",
+				"AcceptGift_(O)896": "{{i18n:Xeth.Gift.Galaxy.Soul}}",
+				"AcceptGift_(O)769": "{{i18n:Xeth.GiftTastes.love}}",
+				"AcceptGift_(O)StardropTea": "{{i18n:Xeth.Gift.StardropTea}}",
+				
+				"AcceptGift_(O)64": "{{i18n:Xeth.Gift.Ruby}}",
+				"AcceptGift_(O)253": "{{i18n:Xeth.Gift.Triple.Shot.Espresso}}",
+				"AcceptGift_(O)395": "{{i18n:Xeth.Gift.Coffee}}",
+				"AcceptGift_(O)308": "{{i18n:Xeth.Gift.Void.Mayonnaise}}",
+				"AcceptGift_(O)795": "{{i18n:Xeth.Gift.Void.Salmon}}",
+				"AcceptGift_(O)305": "{{i18n:Xeth.Gift.Void.Egg}}",
+				
+				"AcceptGift_(O)772": "{{i18n:Xeth.Gift.Oil.of.Garlic}}",
+				"AcceptGift_(O)248": "{{i18n:Xeth.Gift.Garlic}}",
+				"AcceptGift_(O)729": "{{i18n:Xeth.Gift.Escargot}}",
+				"AcceptGift_(O)649": "{{i18n:Xeth.Gift.Fiddlehead.Risotto}}",
+				"AcceptGift_(O)879": "{{i18n:Xeth.Gift.Monster.Musk}}",
+				"AcceptGift_(O)421": "{{i18n:Xeth.Gift.Sunflower.Before.Ritual}}",
+				
+				"reject_xxth0.ScarletMansion_Beef.Wellington": "{{i18n:Xeth.Gift.Beef.Wellington}}",
+				
+				"reject_71": "{{i18n:Xeth.Gift.QuestItem}}",
+				"reject_191": "{{i18n:Xeth.Gift.QuestItem}}",
+				"reject_742": "{{i18n:Xeth.Gift.QuestItem}}",
+				"reject_788": "{{i18n:Xeth.Gift.QuestItem}}",
+				"reject_789": "{{i18n:Xeth.Gift.QuestItem}}",
+				"reject_790": "{{i18n:Xeth.Gift.Questitem.BerryBasket}}",
+				"reject_864": "{{i18n:Xeth.Gift.QuestItem.WarMemento}}",
+				"reject_865": "{{i18n:Xeth.Gift.QuestItem.GourmetTomatoSalt}}",
+				"reject_866": "{{i18n:Xeth.Gift.QuestItem.StardewValleyRose}}",
+				"reject_867": "{{i18n:Xeth.Gift.QuestItem.AdvancedTVRemote}}",
+				"reject_868": "{{i18n:Xeth.Gift.QuestItem.ArcticShard}}",
+				"reject_869": "{{i18n:Xeth.Gift.QuestItem.WrigglingWorm}}",
+				"reject_870": "{{i18n:Xeth.Gift.QuestItem.PiratesLocket}}",
+				"reject_875": "{{i18n:Xeth.Gift.QuestItem.Ectoplasm}}",
+				"reject_876": "{{i18n:Xeth.Gift.QuestItem.PrismaticJelly}}",
+				
+				"AcceptGift_category_cooking": "{{i18n:Xeth.Gift.Category.Cooking}}",
+				"AcceptGift_category_fish": "{{i18n:Xeth.Gift.Category.Fish}}",
+				"AcceptGift_category_fruit": "{{i18n:Xeth.Gift.Category.fruit}}",
+				"AcceptGift_category_trash": "{{i18n:Xeth.Gift.Category.Trash}}",
+				"AcceptGift_category_gem": "{{i18n:Xeth.Gift.Category.Gem}}",
+				"AcceptGift_category_artisan": "{{i18n:Xeth.Gift.Category.Artisan}}",
+				
+				"Introduction": "{{i18n:Xeth.Introduction}}",
+				"DumpsterDiveComment": "{{i18n:Xeth.DumpsterDiveComment}}",
+				"HitBySlingshot": "{{i18n:Xeth.HitBySlingshot{{Random: {{Range: 1, 6}} }}}}",
+				"Resort": "{{i18n:Xeth.Resort}}",
+				
+				"cc_Bus": "{{i18n:Xeth.cc.Bus}}",
+				"cc_Complete": "{{i18n:Xeth.cc.Complete}}",
+				"joja_begin": "{{i18n:Xeth.joja.Begin}}",
+				
+				"movieTheater": "{{i18n:Xeth.movieTheather}}",
+				"GreenRain": "{{i18n:Xeth.GreenRain.1}}",
+				"GreenRain_2": "{{i18n:Xeth.GreenRain.2}}",
+                "GreenRainFinished": "{{i18n:Xeth.GreenRainFinished}}",
+				
+				"divorced": "{{i18n:Xeth.divorced.{{Random: {{Range: 1, 6}} }}}}",
+				"breakUp": "{{i18n:Xeth.breakUp}}",
+				"WipedMemory": "{{i18n:Xeth.WipedMemory}}",
+				"AcceptBouquet": "{{i18n:Xeth.AcceptBouquet.1}}",
+				"RejectBouquet_Divorced": "{{i18n:Xeth.RejectBouquet.Divorced}}",
+				"RejectBouquet_PlayerAlreadyMarried": "{{i18n:Xeth.RejectBouquet.PlayerAlreadyMarried}}",
+				"RejectBouquet_NPCAlreadyMarried": "{{i18n:Xeth.RejectBouquet.NPCAlreadyMarried}}",
+				"RejectBouquet_VeryLowHearts": "{{i18n:Xeth.RejectBouquet.VeryLowHearts}}",
+				"RejectBouquet_LowHearts": "{{i18n:Xeth.RejectBouquet.LowHearts}}",
+				
+				"RejectGift_Divorced": "{{i18n:Xeth.RejectGift.Divorced.{{Random: {{Range: 1, 6}} }}}}",
+				
+				"RejectMermaidPendant_PlayerWithSomeoneElse": "{{i18n:Xeth.RejectMermaidPendant.PlayerWithSomeoneElse}}",
+				"RejectMermaidPendant_NPCWithSomeoneElse": "{{i18n:Xeth.RejectMermaidPendant.NPCWithSomeoneElse}}",
+				"RejectMermaidPendant_Under8Hearts": "{{i18n:Xeth.RejectMermaidPendant.Under8Hearts}}",
+				"RejectMermaidPendant_Under10Hearts": "{{i18n:Xeth.RejectMermaidPendant.Under10Hearts}}",
+				"RejectMermaidPendant_NeedHouseUpgrade": "{{i18n:Xeth.RejectMermaidPendant.NeedHouseUpgrade}}",
+				
+				"RejectMovieTicket_AlreadyInvitedBySomeoneElse": "{{i18n:Xeth.RejectMovieTicket.AlreadyInvitedBySomeoneElse}}",
+				"RejectMovieTicket_AlreadyWatchedThisWeek": "{{i18n:Xeth.RejectMovieTicket.AlreadyWatchedThisWeek}}",
+				"RejectMovieTicket_Divorced": "{{i18n:Xeth.RejectMovieTicket.Divorced}}",
+				
+				//Spring Dialogue//
+				"Mon": "{{i18n:Xeth.Spring.Mon.0h}}",
+				"Tue": "{{i18n:Xeth.Spring.Tue.0h}}",
+				"Wed": "{{i18n:Xeth.Spring.Wed.0h}}",
+				"Thu": "{{i18n:Xeth.Spring.Thu.0h}}",
+				"Fri": "{{i18n:Xeth.Spring.Fri.0h}}",
+				"Sat": "{{i18n:Xeth.Spring.Sat.0h}}",
+				"Sun": "{{i18n:Xeth.Spring.Sun.0h}}",
+				
+				"Mon2": "{{i18n:Xeth.Spring.Mon.2h}}",
+				"Tue2": "{{i18n:Xeth.Spring.Tue.2h}}",
+				"Wed2": "{{i18n:Xeth.Spring.Wed.2h}}",
+				"Thu2": "{{i18n:Xeth.Spring.Thu.2h}}",
+				"Fri2": "{{i18n:Xeth.Spring.Fri.2h}}",
+				"Sat2": "{{i18n:Xeth.Spring.Sat.2h}}",
+				"Sun2": "{{i18n:Xeth.Spring.Sun.2h}}",
+				
+				"Mon4": "{{i18n:Xeth.Spring.Mon.4h}}",
+				"Tue4": "{{i18n:Xeth.Spring.Tue.4h}}",
+				"Wed4": "{{i18n:Xeth.Spring.Wed.4h}}",
+				"Thu4": "{{i18n:Xeth.Spring.Thu.4h}}",
+				"Fri4": "{{i18n:Xeth.Spring.Fri.4h}}",
+				"Sat4": "{{i18n:Xeth.Spring.Sat.4h}}",
+				"Sun4": "{{i18n:Xeth.Spring.Sun.4h}}",
+				
+				"Mon6": "{{i18n:Xeth.Spring.Mon.6h}}",
+				"Tue6": "{{i18n:Xeth.Spring.Tue.6h}}",
+				"Wed6": "{{i18n:Xeth.Spring.Wed.6h}}",
+				"Thu6": "{{i18n:Xeth.Spring.Thu.6h}}",
+				"Fri6": "{{i18n:Xeth.Spring.Fri.6h}}",
+				"Sat6": "{{i18n:Xeth.Spring.Sat.6h}}",
+				"Sun6": "{{i18n:Xeth.Spring.Sun.6h}}",
+				
+				"Mon8": "{{i18n:Xeth.Spring.Mon.8h}}",
+				"Tue8": "{{i18n:Xeth.Spring.Tue.8h}}",
+				"Wed8": "{{i18n:Xeth.Spring.Wed.8h}}",
+				"Thu8": "{{i18n:Xeth.Spring.Thu.8h}}",
+				"Fri8": "{{i18n:Xeth.Spring.Fri.8h}}",
+				"Sat8": "{{i18n:Xeth.Spring.Sat.8h}}",
+				"Sun8": "{{i18n:Xeth.Spring.Sun.8h}}",
+				
+				"Mon10": "{{i18n:Xeth.Spring.Mon.10h}}",
+				"Tue10": "{{i18n:Xeth.Spring.Tue.10h}}",
+				"Wed10": "{{i18n:Xeth.Spring.Wed.10h}}",
+				"Thu10": "{{i18n:Xeth.Spring.Thu.10h}}",
+				"Fri10": "{{i18n:Xeth.Spring.Fri.10h}}",
+				"Sat10": "{{i18n:Xeth.Spring.Sat.10h}}",
+				"Sun10": "{{i18n:Xeth.Spring.Sun.10h}}",
+				
+				"spring_1": "{{i18n:Xeth.Spring.1}}",
+				"spring_7": "{{i18n:Xeth.Spring.7}}",
+				"spring_10": "{{i18n:Xeth.Spring.10}}",
+				"spring_12": "{{i18n:Xeth.Spring.12}}",
+				"spring_13": "{{i18n:Xeth.Spring.13}}",
+				"spring_15": "{{i18n:Xeth.Spring.15}}",
+				"spring_16": "{{i18n:Xeth.Spring.16}}",
+				"spring_17": "{{i18n:Xeth.Spring.17}}",
+				"spring_18": "{{i18n:Xeth.Spring.18}}",
+				"spring_23": "{{i18n:Xeth.Spring.23}}",
+				"spring_24": "{{i18n:Xeth.Spring.24}}",
+				"spring_28": "{{i18n:Xeth.Spring.28}}",
+				
+				//Summer Dialogue//
+				"summer_Mon": "{{i18n:Xeth.Summer.Mon.0h}}",
+				"summer_Tue": "{{i18n:Xeth.Summer.Tue.0h}}",
+				"summer_Wed": "{{i18n:Xeth.Summer.Wed.0h}}",
+				"summer_Thu": "{{i18n:Xeth.Summer.Thu.0h}}",
+				"summer_Fri": "{{i18n:Xeth.Summer.Fri.0h}}",
+				"summer_Sat": "{{i18n:Xeth.Summer.Sat.0h}}",
+				"summer_Sun": "{{i18n:Xeth.Summer.Sun.0h}}",
+				
+				"summer_Mon2": "{{i18n:Xeth.Summer.Mon.2h}}",
+				"summer_Tue2": "{{i18n:Xeth.Summer.Tue.2h}}",
+				"summer_Wed2": "{{i18n:Xeth.Summer.Wed.2h}}",
+				"summer_Thu2": "{{i18n:Xeth.Summer.Thu.2h}}",
+				"summer_Fri2": "{{i18n:Xeth.Summer.Fri.2h}}",
+				"summer_Sat2": "{{i18n:Xeth.Summer.Sat.2h}}",
+				"summer_Sun2": "{{i18n:Xeth.Summer.Sun.2h}}",
+				
+				"summer_Mon4": "{{i18n:Xeth.Summer.Mon.4h}}",
+				"summer_Tue4": "{{i18n:Xeth.Summer.Tue.4h}}",
+				"summer_Wed4": "{{i18n:Xeth.Summer.Wed.4h}}",
+				"summer_Thu4": "{{i18n:Xeth.Summer.Thu.4h}}",
+				"summer_Fri4": "{{i18n:Xeth.Summer.Fri.4h}}",
+				"summer_Sat4": "{{i18n:Xeth.Summer.Sat.4h}}",
+				"summer_Sun4": "{{i18n:Xeth.Summer.Sun.4h}}",
+				
+				"summer_Mon6":"{{i18n:Xeth.Summer.Mon.6h}}",
+				"summer_Tue6": "{{i18n:Xeth.Summer.Tue.6h}}",
+				"summer_Wed6": "{{i18n:Xeth.Summer.Wed.6h}}",
+				"summer_Thu6": "{{i18n:Xeth.Summer.Thu.6h}}",
+				"summer_Fri6": "{{i18n:Xeth.Summer.Fri.6h}}",
+				"summer_Sat6": "{{i18n:Xeth.Summer.Sat.6h}}",
+				"summer_Sun6": "{{i18n:Xeth.Summer.Sun.6h}}",
+				
+				"summer_Mon8": "{{i18n:Xeth.Summer.Mon.8h}}",
+				"summer_Tue8": "{{i18n:Xeth.Summer.Tue.8h}}",
+				"summer_Wed8": "{{i18n:Xeth.Summer.Wed.8h}}",
+				"summer_Thu8": "{{i18n:Xeth.Summer.Thu.8h}}",
+				"summer_Fri8": "{{i18n:Xeth.Summer.Fri.8h}}",
+				"summer_Sat8": "{{i18n:Xeth.Summer.Sat.8h}}",
+				"summer_Sun8": "{{i18n:Xeth.Summer.Sun.8h}}",
+				
+				"summer_Mon10": "{{i18n:Xeth.Summer.Mon.10h}}",
+				"summer_Tue10": "{{i18n:Xeth.Summer.Tue.10h}}",
+				"summer_Wed10": "{{i18n:Xeth.Summer.Wed.10h}}",
+				"summer_Thu10": "{{i18n:Xeth.Summer.Thu.10h}}",
+				"summer_Fri10": "{{i18n:Xeth.Summer.Fri.10h}}",
+				"summer_Sat10": "{{i18n:Xeth.Summer.Sat.10h}}",
+				"summer_Sun10": "{{i18n:Xeth.Summer.Sun.10h}}",
+				
+				"summer_4": "{{i18n:Xeth.Summer.4}}",
+				"summer_8": "{{i18n:Xeth.Summer.8}}",				
+				"summer_10": "{{i18n:Xeth.Summer.10}}",				
+				"summer_11": "{{i18n:Xeth.Summer.11}}",
+				"summer_22": "{{i18n:Xeth.Summer.22}}",
+				"summer_27": "{{i18n:Xeth.Summer.27}}",
+				"summer_28": "{{i18n:Xeth.Summer.28}}",
+				
+				//Fall Dialogue//
+				"fall_Mon": "{{i18n:Xeth.Fall.Mon.0h}}",
+				"fall_Tue": "{{i18n:Xeth.Fall.Tue.0h}}",
+				"fall_Wed": "{{i18n:Xeth.Fall.Wed.0h}}",
+				"fall_Thu": "{{i18n:Xeth.Fall.Thu.0h}}",
+				"fall_Fri": "{{i18n:Xeth.Fall.Fri.0h}}",
+				"fall_Sat": "{{i18n:Xeth.Fall.Sat.0h}}",
+				"fall_Sun": "{{i18n:Xeth.Fall.Sun.0h}}",
+				
+				"fall_Mon2": "{{i18n:Xeth.Fall.Mon.2h}}",
+				"fall_Tue2": "{{i18n:Xeth.Fall.Tue.2h}}",
+				"fall_Wed2": "{{i18n:Xeth.Fall.Wed.2h}}",
+				"fall_Thu2": "{{i18n:Xeth.Fall.Thu.2h}}",
+				"fall_Fri2": "{{i18n:Xeth.Fall.Fri.2h}}",
+				"fall_Sat2": "{{i18n:Xeth.Fall.Sat.2h}}",
+				"fall_Sun2": "{{i18n:Xeth.Fall.Sun.2h}}",
+				
+				"fall_Mon4": "{{i18n:Xeth.Fall.Mon.4h}}",
+				"fall_Tue4": "{{i18n:Xeth.Fall.Tue.4h}}",
+				"fall_Wed4": "{{i18n:Xeth.Fall.Wed.4h}}",
+				"fall_Thu4": "{{i18n:Xeth.Fall.Thu.4h}}",
+				"fall_Fri4": "{{i18n:Xeth.Fall.Fri.4h}}",
+				"fall_Sat4": "{{i18n:Xeth.Fall.Sat.4h}}",
+				"fall_Sun4": "{{i18n:Xeth.Fall.Sun.4h}}",
+				
+				"fall_Mon6":"{{i18n:Xeth.Fall.Mon.6h}}",
+				"fall_Tue6": "{{i18n:Xeth.Fall.Tue.6h}}",
+				"fall_Wed6": "{{i18n:Xeth.Fall.Wed.6h}}",
+				"fall_Thu6": "{{i18n:Xeth.Fall.Thu.6h}}",
+				"fall_Fri6": "{{i18n:Xeth.Fall.Fri.6h}}",
+				"fall_Sat6": "{{i18n:Xeth.Fall.Sat.6h}}",
+				"fall_Sun6": "{{i18n:Xeth.Fall.Sun.6h}}",
+				
+				"fall_Mon8": "{{i18n:Xeth.Fall.Mon.8h}}",
+				"fall_Tue8": "{{i18n:Xeth.Fall.Tue.8h}}",
+				"fall_Wed8": "{{i18n:Xeth.Fall.Wed.8h}}",
+				"fall_Thu8": "{{i18n:Xeth.Fall.Thu.8h}}",
+				"fall_Fri8": "{{i18n:Xeth.Fall.Fri.8h}}",
+				"fall_Sat8": "{{i18n:Xeth.Fall.Sat.8h}}",
+				"fall_Sun8": "{{i18n:Xeth.Fall.Sun.8h}}",
+				
+				"fall_Mon10": "{{i18n:Xeth.Fall.Mon.10h}}",
+				"fall_Tue10": "{{i18n:Xeth.Fall.Tue.10h}}",
+				"fall_Wed10": "{{i18n:Xeth.Fall.Wed.10h}}",
+				"fall_Thu10": "{{i18n:Xeth.Fall.Thu.10h}}",
+				"fall_Fri10": "{{i18n:Xeth.Fall.Fri.10h}}",
+				"fall_Sat10": "{{i18n:Xeth.Fall.Sat.10h}}",
+				"fall_Sun10": "{{i18n:Xeth.Fall.Sun.10h}}",
+
+				"fall_3": "{{i18n:Xeth.Fall.3}}",
+				"fall_8": "{{i18n:Xeth.Fall.8}}",
+				"fall_9": "{{i18n:Xeth.Fall.9}}",
+				"fall_11": "{{i18n:Xeth.Fall.11}}",
+				"fall_15": "{{i18n:Xeth.Fall.15}}",
+				"fall_16": "{{i18n:Xeth.Fall.16}}",
+				"fall_22": "{{i18n:Xeth.Fall.22}}",
+				"fall_23": "{{i18n:Xeth.Fall.23}}",
+				"fall_26": "{{i18n:Xeth.Fall.26}}",
+
+				//Winter Dialogue//
+				"winter_Mon": "{{i18n:Xeth.Winter.Mon.0h}}",
+				"winter_Tue": "{{i18n:Xeth.Winter.Tue.0h}}",
+				"winter_Wed": "{{i18n:Xeth.Winter.Wed.0h}}",
+				"winter_Thu": "{{i18n:Xeth.Winter.Thu.0h}}",
+				"winter_Fri": "{{i18n:Xeth.Winter.Fri.0h}}",
+				"winter_Sat": "{{i18n:Xeth.Winter.Sat.0h}}",
+				"winter_Sun": "{{i18n:Xeth.Winter.Sun.0h}}",
+				
+				"winter_Mon2": "{{i18n:Xeth.Winter.Mon.2h}}",
+				"winter_Tue2": "{{i18n:Xeth.Winter.Tue.2h}}",
+				"winter_Wed2": "{{i18n:Xeth.Winter.Wed.2h}}",
+				"winter_Thu2": "{{i18n:Xeth.Winter.Thu.2h}}",
+				"winter_Fri2": "{{i18n:Xeth.Winter.Fri.2h}}",
+				"winter_Sat2": "{{i18n:Xeth.Winter.Sat.2h}}",
+				"winter_Sun2": "{{i18n:Xeth.Winter.Sun.2h}}",
+				
+				"winter_Mon4": "{{i18n:Xeth.Winter.Mon.4h}}",
+				"winter_Tue4": "{{i18n:Xeth.Winter.Tue.4h}}",
+				"winter_Wed4": "{{i18n:Xeth.Winter.Wed.4h}}",
+				"winter_Thu4": "{{i18n:Xeth.Winter.Thu.4h}}",
+				"winter_Fri4": "{{i18n:Xeth.Winter.Fri.4h}}",
+				"winter_Sat4": "{{i18n:Xeth.Winter.Sat.4h}}",
+				"winter_Sun4": "{{i18n:Xeth.Winter.Sun.4h}}",
+				
+				"winter_Mon6":"{{i18n:Xeth.Winter.Mon.6h}}",
+				"winter_Tue6": "{{i18n:Xeth.Winter.Tue.6h}}",
+				"winter_Wed6": "{{i18n:Xeth.Winter.Wed.6h}}",
+				"winter_Thu6": "{{i18n:Xeth.Winter.Thu.6h}}",
+				"winter_Fri6": "{{i18n:Xeth.Winter.Fri.6h}}",
+				"winter_Sat6": "{{i18n:Xeth.Winter.Sat.6h}}",
+				"winter_Sun6": "{{i18n:Xeth.Winter.Sun.6h}}",
+				
+				"winter_Mon8": "{{i18n:Xeth.Winter.Mon.8h}}",
+				"winter_Tue8": "{{i18n:Xeth.Winter.Tue.8h}}",
+				"winter_Wed8": "{{i18n:Xeth.Winter.Wed.8h}}",
+				"winter_Thu8": "{{i18n:Xeth.Winter.Thu.8h}}",
+				"winter_Fri8": "{{i18n:Xeth.Winter.Fri.8h}}",
+				"winter_Sat8": "{{i18n:Xeth.Winter.Sat.8h}}",
+				"winter_Sun8": "{{i18n:Xeth.Winter.Sun.8h}}",
+				
+				"winter_Mon10": "{{i18n:Xeth.Winter.Mon.10h}}",
+				"winter_Tue10": "{{i18n:Xeth.Winter.Tue.10h}}",
+				"winter_Wed10": "{{i18n:Xeth.Winter.Wed.10h}}",
+				"winter_Thu10": "{{i18n:Xeth.Winter.Thu.10h}}",
+				"winter_Fri10": "{{i18n:Xeth.Winter.Fri.10h}}",
+				"winter_Sat10": "{{i18n:Xeth.Winter.Sat.10h}}",
+				"winter_Sun10": "{{i18n:Xeth.Winter.Sun.10h}}",
+
+				"winter_1": "{{i18n:Xeth.Winter.1}}",
+				"winter_3": "{{i18n:Xeth.Winter.3}}",
+				"winter_7": "{{i18n:Xeth.Winter.7}}",
+				"winter_8": "{{i18n:Xeth.Winter.8}}",
+				"winter_14": "{{i18n:Xeth.Winter.14}}",
+				"winter_15": "{{i18n:Xeth.Winter.15}}",
+				"winter_16": "{{i18n:Xeth.Winter.16}}",
+				"winter_17": "{{i18n:Xeth.Winter.17}}",
+				"winter_24": "{{i18n:Xeth.Winter.24}}",
+				"winter_25": "{{i18n:Xeth.Winter.25}}",
+				"winter_28": "{{i18n:Xeth.Winter.28}}",
+				
+				// Custom Location Dialogue //
+				"{{ModId}}_ScarletMansion1F_6_21": "{{i18n:Xeth.Library.{{Random: {{Range: 1, 4}} }}}}",
+				"{{ModId}}_XethCoffin": "{{i18n:Xeth.Coofin.{{Random: {{Range: 1, 5}} }}}}",
+				
+				"Club_5_10": "{{i18n:Xeth.Casino.{{Random: {{Range: 1, 4}} }}}}",
+				"Club_7_4": "{{i18n:Xeth.Casino.WithMrQi.{{Random: {{Range: 1, 4}} }}}}",
+				"SandyHouse_2_7": "{{i18n:Xeth.Sandy.1}}",
+				
+				"WizardHouse": "{{i18n:Xeth.WizardHouse.1}}",
+				"AdventureGuild_1_13": "{{i18n:Xeth.SVE.AdventureGuild.{{Random: {{Range: 1, 2}} }}}}",
+				"AdventureGuild_7_16": "{{i18n:Xeth.SVE.AdventureGuild.{{Random: {{Range: 3, 4}} }}}}",
+
+				"Saloon_1_18": "{{i18n:Xeth.Saloon.{{Random: {{Range: 1, 5}} }}}}",
+			}
+		},
+		
+		{
+			"LogName": "Xeth's Dialogue Y1 (Door Unlocked)",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Xeth",
+			"When": {
+				"OddYear": true,
+				"HasSeenEvent |contains={{ModId}}_XethHeartEventMail.1": true
+			},
+            "Entries": {
+				"Mon": "{{i18n:Xeth.Spring.Mon.DoorUnlocked.0h}}",
+				"Tue": "{{i18n:Xeth.Spring.Tue.DoorUnlocked.0h}}",
+				"Wed": "{{i18n:Xeth.Spring.Wed.DoorUnlocked.0h}}",
+				"Thu": "{{i18n:Xeth.Spring.Thu.DoorUnlocked.0h}}",
+				"Fri": "{{i18n:Xeth.Spring.Fri.DoorUnlocked.0h}}",
+				"Sat": "{{i18n:Xeth.Spring.Sat.DoorUnlocked.0h}}",
+				"Sun": "{{i18n:Xeth.Spring.Sun.DoorUnlocked.0h}}",
+				
+				"summer_Mon": "{{i18n:Xeth.Summer.DoorUnlocked.Mon.0h}}",
+				"summer_Tue": "{{i18n:Xeth.Summer.DoorUnlocked.Tue.0h}}",
+				"summer_Wed": "{{i18n:Xeth.Summer.DoorUnlocked.Wed.0h}}",
+				"summer_Thu": "{{i18n:Xeth.Summer.DoorUnlocked.Thu.0h}}",
+				"summer_Fri": "{{i18n:Xeth.Summer.DoorUnlocked.Fri.0h}}",
+				"summer_Sat": "{{i18n:Xeth.Summer.DoorUnlocked.Sat.0h}}",
+				"summer_Sun": "{{i18n:Xeth.Summer.DoorUnlocked.Sun.0h}}",
+				
+				"fall_Mon": "{{i18n:Xeth.Fall.DoorUnlocked.Mon.0h}}",
+				"fall_Tue": "{{i18n:Xeth.Fall.DoorUnlocked.Tue.0h}}",
+				"fall_Wed": "{{i18n:Xeth.Fall.DoorUnlocked.Wed.0h}}",
+				"fall_Thu": "{{i18n:Xeth.Fall.DoorUnlocked.Thu.0h}}",
+				"fall_Fri": "{{i18n:Xeth.Fall.DoorUnlocked.Fri.0h}}",
+				"fall_Sat": "{{i18n:Xeth.Fall.DoorUnlocked.Sat.0h}}",
+				"fall_Sun": "{{i18n:Xeth.Fall.DoorUnlocked.Sun.0h}}",
+				
+				"winter_Mon": "{{i18n:Xeth.Winter.DoorUnlocked.Mon.0h}}",
+				"winter_Tue": "{{i18n:Xeth.Winter.DoorUnlocked.Tue.0h}}",
+				"winter_Wed": "{{i18n:Xeth.Winter.DoorUnlocked.Wed.0h}}",
+				"winter_Thu": "{{i18n:Xeth.Winter.DoorUnlocked.Thu.0h}}",
+				"winter_Fri": "{{i18n:Xeth.Winter.DoorUnlocked.Fri.0h}}",
+				"winter_Sat": "{{i18n:Xeth.Winter.DoorUnlocked.Sat.0h}}",
+				"winter_Sun": "{{i18n:Xeth.Winter.DoorUnlocked.Sun.0h}}",
+			}
+		},
+			// Rain dialogues Y1//
+        {
+            "Log": "Spring Rainy day Y1",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/rainy",
+            "Entries": {
+                "Xeth": "{{i18n:Xeth.Spring.Rain.{{Random: {{Range: 1, 4}} }}}}"
+            },
+            "When": {
+                "Season": "Spring",
+				"OddYear": true
+            }
+        },
+        {
+            "Log": "Summer Rainy day Y1",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/rainy",
+            "Entries": {
+                "Xeth": "{{i18n:Xeth.Summer.Rain.{{Random: {{Range: 1, 4}} }}}}"
+            },
+            "When": {
+                "Season": "Summer",
+				"OddYear": true
+            }
+        },
+        {
+            "Log": "Fall Rainy day Y1",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/rainy",
+            "Entries": {
+                "Xeth": "{{i18n:Xeth.Fall.Rain.{{Random: {{Range: 1, 4}} }}}}"
+            },
+            "When": {
+                "Season": "Fall",
+				"OddYear": true
+            }
+        },
+		{
+            "Log": "Winter Rainy day Y1",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/rainy",
+            "Entries": {
+                "Xeth": "{{i18n:Xeth.Winter.Rain.{{Random: {{Range: 1, 4}} }}}}"
+            },
+            "When": {
+                "Season": "Winter",
+				"OddYear": true
+            }
+        },
+			// Rain dialogues Y2//
+		{
+            "Log": "Spring Rainy day Y2",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/rainy",
+            "Entries": {
+                "Xeth": "{{i18n:Xeth.Y2.Spring.Rain.{{Random: {{Range: 1, 4}} }}}}"
+            },
+            "When": {
+                "Season": "Spring",
+				"OddYear": false
+            }
+        },
+        {
+            "Log": "Summer Rainy day Y2",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/rainy",
+            "Entries": {
+                "Xeth": "{{i18n:Xeth.Y2.Summer.Rain.{{Random: {{Range: 1, 4}} }}}}"
+            },
+            "When": {
+                "Season": "Summer",
+				"OddYear": false
+            }
+        },
+        {
+            "Log": "Fall Rainy day Y2",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/rainy",
+            "Entries": {
+                "Xeth": "{{i18n:Xeth.Y2.Fall.Rain.{{Random: {{Range: 1, 4}} }}}}"
+            },
+            "When": {
+                "Season": "Fall",
+				"OddYear": false
+            }
+        },
+		{
+            "Log": "Winter Rainy day Y2",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/rainy",
+            "Entries": {
+                "Xeth": "{{i18n:Xeth.Y2.Winter.Rain.{{Random: {{Range: 1, 4}} }}}}"
+            },
+            "When": {
+                "Season": "Winter",
+				"OddYear": false
+            }
+        },
+		
+		{
+			"LogName": "Spouse Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Xeth",
+            "Entries": {
+				
+				"AcceptBirthdayGift_Loved": "{{i18n:Spouse.Xeth.GiftTastes.Birthday.love}}",
+				"AcceptBirthdayGift_Liked": "{{i18n:Spouse.Xeth.GiftTastes.Birthday.like}}",
+				"AcceptBirthdayGift_Neutral": "{{i18n:Spouse.Xeth.GiftTastes.Birthday.neutral}}",
+				"AcceptBirthdayGift_Disliked": "{{i18n:Spouse.Xeth.GiftTastes.Birthday.dislike}}",
+				"AcceptBirthdayGift_Hated": "{{i18n:Spouse.Xeth.GiftTastes.Birthday.hate}}",
+				
+				"AcceptGift_(O)348": "{{i18n:Spouse.Xeth.Gift.Wine}}",
+				"AcceptGift_(O)767": "{{i18n:Spouse.Xeth.Gift.Bat.Wings}}",
+				"AcceptGift_(O)773": "{{i18n:Spouse.Xeth.Gift.Life.Elixir}}",
+				"AcceptGift_(O)852": "{{i18n:Spouse.Xeth.Gift.Dragon.Tooth}}",
+				"AcceptGift_(O)373": "{{i18n:Spouse.Xeth.Gift.Golden.Pumpkin}}",
+				"AcceptGift_(O)279": "{{i18n:Spouse.Xeth.Gift.Magic.Rock.Candy}}",
+				"AcceptGift_(O)797": "{{i18n:Spouse.Xeth.Gift.Pearl}}",
+				"AcceptGift_(O)74": "{{i18n:Spouse.Xeth.Gift.Prismatic.Shard}}",
+				"AcceptGift_(O)896": "{{i18n:Spouse.Xeth.Gift.Galaxy.Soul}}",
+				"AcceptGift_(O)769": "{{i18n:Spouse.Xeth.GiftTastes.love}}",
+				"AcceptGift_(O)StardropTea": "{{i18n:Spouse.Xeth.Gift.StardropTea}}",
+				
+				"AcceptGift_(O)64": "{{i18n:Spouse.Xeth.Gift.Ruby}}",
+				"AcceptGift_(O)253": "{{i18n:Spouse.Xeth.Gift.Triple.Shot.Espresso}}",
+				"AcceptGift_(O)395": "{{i18n:Spouse.Xeth.Gift.Coffee}}",
+				"AcceptGift_(O)308": "{{i18n:Spouse.Xeth.Gift.Void.Mayonnaise}}",
+				"AcceptGift_(O)795": "{{i18n:Spouse.Xeth.Gift.Void.Salmon}}",
+				"AcceptGift_(O)305": "{{i18n:Spouse.Xeth.Gift.Void.Egg}}",
+				
+				"AcceptGift_(O)772": "{{i18n:Spouse.Xeth.Gift.Oil.of.Garlic}}",
+				"AcceptGift_(O)248": "{{i18n:Spouse.Xeth.Gift.Garlic}}",
+				"AcceptGift_(O)729": "{{i18n:Spouse.Xeth.Gift.Escargot}}",
+				"AcceptGift_(O)649": "{{i18n:Spouse.Xeth.Gift.Fiddlehead.Risotto}}",
+				"AcceptGift_(O)879": "{{i18n:Spouse.Xeth.Gift.Monster.Musk}}",
+				"AcceptGift_(O)421": "{{i18n:Spouse.Xeth.Gift.Sunflower.Before.Ritual}}",
+				
+				"AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Void_Shard": "{{i18n:Spouse.Xeth.SVE.Gift.Void.Shard}}",
+				"AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine": "{{i18n:Spouse.Xeth.SVE.Gift.Aged.Blue.Moon.Wine}}",
+				"AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine": "{{i18n:Spouse.Xeth.SVE.Gift.Blue.Moon.Wine}}",
+				"AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Void_Soul": "{{i18n:Spouse.Xeth.SVE.Gift.Void.Soul}}",
+				"AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Swirl_Stone": "{{i18n:Spouse.Xeth.SVE.Gift.Swirl.Stone}}",
+				"AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Void_Root": "{{i18n:Spouse.Xeth.SVE.Gift.Void.Root}}",
+				"AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Void_Eel": "{{i18n:Spouse.Xeth.SVE.Gift.Void.Eel}}",
+			},
+		    "When": {
+                "Spouse": "Xeth"
+                }
+		},
+		
+		{
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "Xeth.cs.3980": "{{i18n:Xeth.AcceptMermaidPendant}}",
+				"Xeth_AfterWedding": "{{i18n:Xeth.AfterWedding}}"
+            }
+        },
+		{
+            "Action": "EditData",
+            "Target": "Data/EngagementDialogue",
+            "Entries": {
+                "Xeth0": "{{i18n:Xeth.Engagement.1}}",
+                "Xeth1": "{{i18n:Xeth.Engagement.2}}"
+            }
+        },
+		
+		// Dialogues that depended on other mods //
+		
+		{
+			"LogName": "Xeth's SVE Non-spouse",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Xeth",
+            "Entries": {
+				
+				// SVE objects //
+				"AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Void_Shard": "{{i18n:Xeth.SVE.Gift.Void.Shard}}",
+				"AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine": "{{i18n:Xeth.SVE.Gift.Aged.Blue.Moon.Wine}}",
+				"AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine": "{{i18n:Xeth.SVE.Gift.Blue.Moon.Wine}}",
+				"AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Void_Soul": "{{i18n:Xeth.SVE.Gift.Void.Soul}}",
+				"AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Swirl_Stone": "{{i18n:Xeth.SVE.Gift.Swirl.Stone}}",
+				"AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Void_Root": "{{i18n:Xeth.SVE.Gift.Void.Root}}",
+				"AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Void_Eel": "{{i18n:Xeth.SVE.Gift.Void.Eel}}",
+				
+				// Replacing vanilla //
+				"Tue8": "{{i18n:Xeth.SVE.Spring.Tue.8h}}",
+				"Wed6": "{{i18n:Xeth.SVE.Spring.Wed.6h}}",
+				"Wed10": "{{i18n:Xeth.SVE.Spring.Wed.10h}}",
+				"Thu4": "{{i18n:Xeth.SVE.Spring.Thu.4h}}",
+				"Fri2": "{{i18n:Xeth.SVE.Spring.Fri.2h}}",
+				"Sat6": "{{i18n:Xeth.SVE.Spring.Sat.6h}}",
+				"Sun2": "{{i18n:Xeth.SVE.Spring.Sun.2h}}",
+				"Sun4": "{{i18n:Xeth.SVE.Spring.Sun.4h}}",
+				"Sun6": "{{i18n:Xeth.SVE.Spring.Sun.6h}}",
+			},
+			"When": {
+				"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"OddYear": true
+			},
+		},
+		{
+			// SVE Y2 //
+			"LogName": "Xeth's SVE Non-spouse Y2",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Xeth",
+            "Entries": {
+
+				// Replacing vanilla //
+				"Sun8": "{{i18n:Xeth.SVE.Y2.Spring.Sun.8h}}",
+			},
+			"When": {
+				"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"OddYear": false
+			},
+		},
+		{
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Xeth",
+            "Entries": {	
+				"give_pendant": "{{i18n:Xeth.AcceptMermaidPendant}}"
+			},
+			"When": {
+				"HasMod: |contains=misscoriel.UCRFix": true,
+			},
+		}
+	]
+}

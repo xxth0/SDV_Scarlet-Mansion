@@ -1,0 +1,83 @@
+{
+    "Format": "2.3.0",
+    "DynamicTokens": [
+		{
+            "Name": "OddYear",
+            "Value": "{{Query: {{Year}} % 2 = 1}}"
+        },
+		{
+			"Name": "RandomSpecialDialogue",
+			"Value": "{{Random: {{Range: 1, 4}} }}"
+		}
+	],
+	
+	"ConfigSchema": {
+		"DivorceConsequenceDialogues": {
+				"AllowValues": "true, false",
+				"Default": "true",
+				"Description": "{{i18n:Config-Divorce.Consequence.Dialogues.desc}}"
+		}
+	},
+	
+    "Changes": [
+		{
+			// Maps //
+			"Action": "Include",
+			"FromFile": "data/MapData/Audio.json"
+		},
+		{
+			"Action": "Include",
+			"FromFile": "data/MapData/MapsPatches.json"
+		},
+		{
+			"Action": "Include",
+			"FromFile": "data/CJBWarps.json"
+		},
+		
+		{
+			// NPC //
+			"Action": "Include",
+			"FromFile": "data/NPCData/NPC_Xeth.json"
+		},
+		{
+			"Action": "Include",
+			"FromFile": "data/NPCData/NPC_Felix.json"
+		},	
+        {
+            "LogName": "Festivals (No SVE)",
+            "Action": "Include",
+            "FromFile": "data/Festivals/Festivals.json",
+			"When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+            }
+        },
+		{
+            "LogName": "Festivals (SVE)",
+            "Action": "Include",
+            "FromFile": "data/Fesivals/SVEFestivals.json",
+			"When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+		{
+			// Items //
+            "LogName": "Objects",
+            "Action": "Include",
+            "FromFile": "data/Objects/Objects.json"
+        },
+		{
+			"Action": "Include",
+			"FromFile": "data/Mail.json"
+		},
+		{
+			"LogName": "Events",
+			"Action": "Include",
+			"FromFile": "data/Events.json"
+		},
+		{
+            "LogName": "Shops",
+            "Action": "Include",
+            "FromFile": "data/Shops.json"
+        }
+    ]
+}
